@@ -1,24 +1,27 @@
 #pragma once
 #include <iostream>
+#include <vector>
 #include <Eigen/Dense>
 
 class NeuralNet
 {
 private:
-	Eigen::MatrixXd a;
-	Eigen::VectorXd w;
-	Eigen::VectorXd b;
-
+	std::vector<int> struc;
+	std::vector<Eigen::MatrixXd> w;
+	Eigen::MatrixXd b;
+	
 public:
 	NeuralNet();
 
-	NeuralNet(Eigen::VectorXd input);
+	NeuralNet(std::vector<int> struc);
+
+	void StrucChange(std::vector<int> newStruc);
 
 	void FeedForward();
 
 	void BackProp();
 
-	Eigen::VectorXd MiniBatch();
+	Eigen::VectorXd MiniBatch(Eigen::VectorXd batch);
 
 	double Sigmoid(int x);
 
@@ -28,4 +31,3 @@ public:
 
 	double ReLUPrime(int x);
 };
-

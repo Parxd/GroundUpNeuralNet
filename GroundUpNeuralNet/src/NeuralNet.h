@@ -4,15 +4,16 @@
 #include <vector>
 #include <Eigen/Dense>
 
-typedef std::unique_ptr<Eigen::MatrixXd> matrixPtr;
-
 class NeuralNet
 {
 private:
-	std::vector<matrixPtr> weight;
-	std::vector<matrixPtr> bias;
+	double eta;
+	std::vector<Eigen::VectorXd> neuron;
+	std::vector<Eigen::MatrixXd> weight;
+	std::vector<Eigen::VectorXd> bias;
+	std::vector<Eigen::MatrixXd> error;
 	std::vector<int> architecture;
 	
 public:
-	NeuralNet(std::vector<int> struc);
+	NeuralNet(std::vector<int> struc, double lR);
 };

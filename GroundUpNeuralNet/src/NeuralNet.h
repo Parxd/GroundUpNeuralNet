@@ -1,19 +1,22 @@
 #pragma once
 #include <iostream>
-#include <memory>
 #include <vector>
 #include <Eigen/Dense>
 
 class NeuralNet
 {
-private:
-	double eta;
-	std::vector<Eigen::VectorXd> neuron;
-	std::vector<Eigen::MatrixXd> weight;
-	std::vector<Eigen::VectorXd> bias;
-	std::vector<Eigen::MatrixXd> error;
-	std::vector<int> architecture;
-	
 public:
-	NeuralNet(std::vector<int> struc, double lR);
+	explicit NeuralNet(std::vector<int> struc, double lR, int function);
+	void printNeurons();
+	void printWeights();
+	void printBias();
+	auto ForwardProp(Eigen::MatrixXf mat);
+
+private:
+	int activationType;
+	double eta;
+	std::vector<Eigen::VectorXf> activation;
+	std::vector<Eigen::MatrixXf> weight;
+	std::vector<Eigen::VectorXf> bias;
+	std::vector<int> architecture;
 };

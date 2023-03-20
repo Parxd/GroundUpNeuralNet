@@ -4,6 +4,6 @@
 
 int main()
 {
-	NeuralNet nn({ 3, 5, 2 }, 0.1);
-
+	NeuralNet nn({ 3, 5, 2 }, 0.1, 0);
+	nn.printWeights();
 }

@@ -1,16 +1,27 @@
 #include <algorithm>
 #include <cmath>
-#include <functional>
 #include <iostream>
 #include <Eigen/Dense>
 #include "NeuralNet.h"
 
-class MathFunctor {
+class ActivationLoss {
 public:
-	MathFunctor(int select) : option(select) {}
+	ActivationLoss(int select) : option(select) {}
+
+	float Sigmoid(float x) const {
+		return 1 / (1 + std::exp(-x));
+	}
+
+	float SigmoidPrime(float x) const {
+		return Sigmoid(x) * (1 - Sigmoid(x));
+	}
+
 	float operator() (float x) const {
 		if (option == 1) {
-			return 1 / (1 + std::exp(-x));
+			return Sigmoid(x);
+		}
+		else if (option == 2) {
+			return SigmoidPrime(x);
 		}
 	}
 private:
@@ -32,7 +43,7 @@ NeuralNet::NeuralNet(std::vector<int> struc, double lR = 0.001, int function = 0
 	}
 }
 
-void NeuralNet::printNeurons() {
+void NeuralNet::printActivations() {
 	for (auto& i : activation) {
 		std::cout << "newL" << std::endl;
 		std::cout << i << std::endl;
@@ -53,15 +64,27 @@ void NeuralNet::printBias() {
 	}
 }
 
-auto NeuralNet::ForwardProp(Eigen::VectorXf mat) {
-	activation[0] = mat;
+auto NeuralNet::ForwardProp(const Eigen::VectorXf& mat) {
 	Eigen::VectorXf prev = mat;
+	activation[0] = prev;
 	for (int i = 1; i < architecture.size(); ++i) {
 		Eigen::VectorXf y = weight[i] * prev;
 		y += bias[i];
-		y = y.unaryExpr(MathFunctor(1));
+		y = y.unaryExpr(ActivationLoss(1));
 		activation[i] = y;
 		prev = y;
 	}
 	return prev;
+}
+
+void NeuralNet::BackwardProp(const Eigen::VectorXf& actual) {
+	Eigen::VectorXf y = actual;
+	Eigen::VectorXf y_hat = activation.back();
+	Eigen::VectorXf error = CostFunc(y, y_hat);
+	
+}
+
+Eigen::VectorXf NeuralNet::CostFunc(const Eigen::VectorXf& actual, const Eigen::VectorXf& predicted)
+{
+	return actual - predicted;
 }

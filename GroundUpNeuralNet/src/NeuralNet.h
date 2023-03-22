@@ -7,10 +7,13 @@ class NeuralNet
 {
 public:
 	explicit NeuralNet(std::vector<int> struc, double lR, int function);
-	void printNeurons();
+	void printActivations();
 	void printWeights();
 	void printBias();
-	auto ForwardProp(Eigen::MatrixXf mat);
+	float Sigmoid(float x) const;
+	auto ForwardProp(const Eigen::VectorXf& mat);
+	void BackwardProp(const Eigen::VectorXf& start);
+	Eigen::VectorXf CostFunc(const Eigen::VectorXf& actual, const Eigen::VectorXf& predicted);
 
 private:
 	int activationType;

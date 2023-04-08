@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/GroundUpNeuralNet.dir/main.cpp.o"
-  "CMakeFiles/GroundUpNeuralNet.dir/main.cpp.o.d"
+  "CMakeFiles/GroundUpNeuralNet.dir/tests/main.cpp.o"
+  "CMakeFiles/GroundUpNeuralNet.dir/tests/main.cpp.o.d"
   "GroundUpNeuralNet"
   "GroundUpNeuralNet.pdb"
 )

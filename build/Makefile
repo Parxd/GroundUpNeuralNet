@@ -523,29 +523,29 @@ GroundUpNeuralNet/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GroundUpNeuralNet.dir/build.make CMakeFiles/GroundUpNeuralNet.dir/build
 .PHONY : GroundUpNeuralNet/fast
 
-main.o: main.cpp.o
-.PHONY : main.o
+tests/main.o: tests/main.cpp.o
+.PHONY : tests/main.o
 
 # target to build an object file
-main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/GroundUpNeuralNet.dir/build.make CMakeFiles/GroundUpNeuralNet.dir/main.cpp.o
-.PHONY : main.cpp.o
+tests/main.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GroundUpNeuralNet.dir/build.make CMakeFiles/GroundUpNeuralNet.dir/tests/main.cpp.o
+.PHONY : tests/main.cpp.o
 
-main.i: main.cpp.i
-.PHONY : main.i
+tests/main.i: tests/main.cpp.i
+.PHONY : tests/main.i
 
 # target to preprocess a source file
-main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/GroundUpNeuralNet.dir/build.make CMakeFiles/GroundUpNeuralNet.dir/main.cpp.i
-.PHONY : main.cpp.i
+tests/main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GroundUpNeuralNet.dir/build.make CMakeFiles/GroundUpNeuralNet.dir/tests/main.cpp.i
+.PHONY : tests/main.cpp.i
 
-main.s: main.cpp.s
-.PHONY : main.s
+tests/main.s: tests/main.cpp.s
+.PHONY : tests/main.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/GroundUpNeuralNet.dir/build.make CMakeFiles/GroundUpNeuralNet.dir/main.cpp.s
-.PHONY : main.cpp.s
+tests/main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GroundUpNeuralNet.dir/build.make CMakeFiles/GroundUpNeuralNet.dir/tests/main.cpp.s
+.PHONY : tests/main.cpp.s
 
 # Help Target
 help:
@@ -587,9 +587,9 @@ help:
 	@echo "... NightlyTest"
 	@echo "... NightlyUpdate"
 	@echo "... GroundUpNeuralNet"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
+	@echo "... tests/main.o"
+	@echo "... tests/main.i"
+	@echo "... tests/main.s"
 .PHONY : help
 
 

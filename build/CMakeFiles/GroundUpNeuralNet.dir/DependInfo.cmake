@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/parxed/code/projects/GroundUpNeuralNet/main.cpp" "CMakeFiles/GroundUpNeuralNet.dir/main.cpp.o" "gcc" "CMakeFiles/GroundUpNeuralNet.dir/main.cpp.o.d"
+  "/home/parxed/code/projects/GroundUpNeuralNet/tests/main.cpp" "CMakeFiles/GroundUpNeuralNet.dir/tests/main.cpp.o" "gcc" "CMakeFiles/GroundUpNeuralNet.dir/tests/main.cpp.o.d"
   )
 
 # Targets to which this target links.

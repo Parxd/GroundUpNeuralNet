@@ -69,28 +69,28 @@ include CMakeFiles/GroundUpNeuralNet.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/GroundUpNeuralNet.dir/flags.make
 
-CMakeFiles/GroundUpNeuralNet.dir/main.cpp.o: CMakeFiles/GroundUpNeuralNet.dir/flags.make
-CMakeFiles/GroundUpNeuralNet.dir/main.cpp.o: ../main.cpp
-CMakeFiles/GroundUpNeuralNet.dir/main.cpp.o: CMakeFiles/GroundUpNeuralNet.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/parxed/code/projects/GroundUpNeuralNet/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/GroundUpNeuralNet.dir/main.cpp.o"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GroundUpNeuralNet.dir/main.cpp.o -MF CMakeFiles/GroundUpNeuralNet.dir/main.cpp.o.d -o CMakeFiles/GroundUpNeuralNet.dir/main.cpp.o -c /home/parxed/code/projects/GroundUpNeuralNet/main.cpp
+CMakeFiles/GroundUpNeuralNet.dir/tests/main.cpp.o: CMakeFiles/GroundUpNeuralNet.dir/flags.make
+CMakeFiles/GroundUpNeuralNet.dir/tests/main.cpp.o: ../tests/main.cpp
+CMakeFiles/GroundUpNeuralNet.dir/tests/main.cpp.o: CMakeFiles/GroundUpNeuralNet.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/parxed/code/projects/GroundUpNeuralNet/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/GroundUpNeuralNet.dir/tests/main.cpp.o"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GroundUpNeuralNet.dir/tests/main.cpp.o -MF CMakeFiles/GroundUpNeuralNet.dir/tests/main.cpp.o.d -o CMakeFiles/GroundUpNeuralNet.dir/tests/main.cpp.o -c /home/parxed/code/projects/GroundUpNeuralNet/tests/main.cpp
 
-CMakeFiles/GroundUpNeuralNet.dir/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GroundUpNeuralNet.dir/main.cpp.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/parxed/code/projects/GroundUpNeuralNet/main.cpp > CMakeFiles/GroundUpNeuralNet.dir/main.cpp.i
+CMakeFiles/GroundUpNeuralNet.dir/tests/main.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GroundUpNeuralNet.dir/tests/main.cpp.i"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/parxed/code/projects/GroundUpNeuralNet/tests/main.cpp > CMakeFiles/GroundUpNeuralNet.dir/tests/main.cpp.i
 
-CMakeFiles/GroundUpNeuralNet.dir/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GroundUpNeuralNet.dir/main.cpp.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/parxed/code/projects/GroundUpNeuralNet/main.cpp -o CMakeFiles/GroundUpNeuralNet.dir/main.cpp.s
+CMakeFiles/GroundUpNeuralNet.dir/tests/main.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GroundUpNeuralNet.dir/tests/main.cpp.s"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/parxed/code/projects/GroundUpNeuralNet/tests/main.cpp -o CMakeFiles/GroundUpNeuralNet.dir/tests/main.cpp.s
 
 # Object files for target GroundUpNeuralNet
 GroundUpNeuralNet_OBJECTS = \
-"CMakeFiles/GroundUpNeuralNet.dir/main.cpp.o"
+"CMakeFiles/GroundUpNeuralNet.dir/tests/main.cpp.o"
 
 # External object files for target GroundUpNeuralNet
 GroundUpNeuralNet_EXTERNAL_OBJECTS =
 
-GroundUpNeuralNet: CMakeFiles/GroundUpNeuralNet.dir/main.cpp.o
+GroundUpNeuralNet: CMakeFiles/GroundUpNeuralNet.dir/tests/main.cpp.o
 GroundUpNeuralNet: CMakeFiles/GroundUpNeuralNet.dir/build.make
 GroundUpNeuralNet: CMakeFiles/GroundUpNeuralNet.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/parxed/code/projects/GroundUpNeuralNet/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable GroundUpNeuralNet"

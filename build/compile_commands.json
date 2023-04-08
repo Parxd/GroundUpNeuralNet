@@ -1,7 +1,7 @@
 [
 {
   "directory": "/home/parxed/code/projects/GroundUpNeuralNet/build",
-  "command": "/usr/bin/g++   -g -o CMakeFiles/GroundUpNeuralNet.dir/main.cpp.o -c /home/parxed/code/projects/GroundUpNeuralNet/main.cpp",
-  "file": "/home/parxed/code/projects/GroundUpNeuralNet/main.cpp"
+  "command": "/usr/bin/g++   -g -o CMakeFiles/GroundUpNeuralNet.dir/tests/main.cpp.o -c /home/parxed/code/projects/GroundUpNeuralNet/tests/main.cpp",
+  "file": "/home/parxed/code/projects/GroundUpNeuralNet/tests/main.cpp"
 }
 ]

@@ -1,1 +1,1 @@
-/usr/bin/g++ -g -rdynamic CMakeFiles/GroundUpNeuralNet.dir/main.cpp.o -o GroundUpNeuralNet 
+/usr/bin/g++ -g -rdynamic CMakeFiles/GroundUpNeuralNet.dir/tests/main.cpp.o -o GroundUpNeuralNet 

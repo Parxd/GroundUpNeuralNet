@@ -8,12 +8,12 @@ Layer::Layer(int numInputs, int numOutputs):
     bias = Eigen::MatrixXf::Random(1, outputFeatures);
 }
 
-void forward(Eigen::MatrixXf& out, const Eigen::MatrixXf& target)
+void forward(const Eigen::MatrixXf& input, Eigen::MatrixXf& output)
 {
 
 }
 
-void backward(Eigen::MatrixXf& ddout, const Eigen::MatrixXf& dout)
+void backward(const Eigen::MatrixXf& dout, Eigen::MatrixXf& ddout)
 {
-    
+
 }

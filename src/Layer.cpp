@@ -7,3 +7,13 @@ Layer::Layer(int numInputs, int numOutputs):
     weights = Eigen::MatrixXf::Random(inputFeatures, outputFeatures);
     bias = Eigen::MatrixXf::Random(1, outputFeatures);
 }
+
+void forward(Eigen::MatrixXf& out, const Eigen::MatrixXf& target)
+{
+
+}
+
+void backward(Eigen::MatrixXf& ddout, const Eigen::MatrixXf& dout)
+{
+    
+}

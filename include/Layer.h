@@ -8,6 +8,8 @@ class Layer : public BaseModule
 public:
     Layer(int numInputs, int numOutputs);
     ~Layer() = default;
+    void forward(Eigen::MatrixXf& out, const Eigen::MatrixXf& target) override;
+    void backward(Eigen::MatrixXf& ddout, const Eigen::MatrixXf& dout) override;
 
 private:
     Eigen::VectorXf activationInputs;

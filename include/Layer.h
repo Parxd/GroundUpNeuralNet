@@ -2,6 +2,7 @@
 #define LAYER_H
 
 #include "BaseModule.h"
+#include "Visitor.h"
 
 class Layer : public BaseModule
 {
@@ -26,9 +27,37 @@ public:
     /**
      * @brief Set learning rate of this individual layer
      * @param [learningRate] Desired learning rate
-     * @return [NONE] Modifies eta attribute in-place
     */
     void setLearningRate(const float& learningRate);
+
+    /**
+     * @brief Update weights matrix (primarily for testing)
+     * @param [newWeights] Matrix for weights to be updated to
+    */
+    void setWeight(const Eigen::MatrixXf& newWeights);
+
+    /**
+     * @brief Update bias matrix (primarily for testing)
+     * @param [newBias] Matrix for biases to be updated to
+    */
+    void setBias(const Eigen::MatrixXf& newBias);
+
+    /**
+     * @brief Retrieve weights matrix
+     * @return Const. reference to internal weights matrix
+    */
+    const Eigen::MatrixXf& getWeight() const;
+
+    /**
+     * @brief Retrieve bias matrix
+     * @return Const. reference to internal bias matrix.
+    */
+    const Eigen::MatrixXf& getBias() const;
+
+    /**
+     * @brief Accept the Visitor class to access attributes
+    */
+    void accept(Visitor& visit) const;
 
 private:
     Eigen::VectorXf storedInput;

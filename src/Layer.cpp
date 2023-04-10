@@ -25,3 +25,28 @@ void Layer::setLearningRate(const float& learningRate)
 {
     eta = learningRate;
 }
+
+void Layer::setWeight(const Eigen::MatrixXf& newWeights)
+{
+    weights = newWeights;
+}
+
+void Layer::setBias(const Eigen::MatrixXf& newBias)
+{
+    bias = newBias;
+}
+
+const Eigen::MatrixXf& Layer::getWeight() const
+{
+    return weights;
+}
+
+const Eigen::MatrixXf& Layer::getBias() const
+{
+    return bias;
+}
+
+void Layer::accept(Visitor& visit) const
+{
+    
+}

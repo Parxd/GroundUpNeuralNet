@@ -46,7 +46,7 @@ const Eigen::MatrixXf& Layer::getBias() const
     return bias;
 }
 
-void Layer::accept(Visitor& visit) const
+void Layer::accept(Visitor& visitor)
 {
-    
+    visitor.visit(*this);
 }

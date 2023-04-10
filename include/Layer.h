@@ -7,38 +7,43 @@
 class Layer : public BaseModule
 {
 public:
+    /**
+     * @brief Sole constructor of an individual fully-connected layer class
+     * @param numInputs - The number of incoming neuron activations from the previous layer 
+     * @param numOutputs - The number of outgoing neuron activations--also the number of nodes of this layer
+    */
     Layer(int numInputs, int numOutputs);
     ~Layer() = default;
     /**
      * @brief Feedforward method of a linear layer class
-     * @param [input] The input matrix that is fed into this layer from the previous layer 
-     * @param [output] The output matrix after operations w/ weights & biases
+     * @param input - The input matrix that is fed into this layer from the previous layer 
+     * @param output - The output matrix after operations w/ weights & biases
      * @return [NONE] Modifies output matrix in-place
     */
     void forward(const Eigen::MatrixXf& input, Eigen::MatrixXf& output) override;
     /**
      * @brief Backpropagation method of a linear layer class
-     * @param [dEW] Derivative of error with respect to weight
-     * @param [output] The output matrix after operation with updated weights
+     * @param dEW - Derivative of error with respect to weight
+     * @param output - The output matrix after operation with updated weights
      * @return [NONE] Modifies output matrix (& weights/biases) in-place
     */
     void backward(const Eigen::MatrixXf& dEW, Eigen::MatrixXf& output) override;
 
     /**
      * @brief Set learning rate of this individual layer
-     * @param [learningRate] Desired learning rate
+     * @param learningRate - Desired learning rate
     */
     void setLearningRate(const float& learningRate);
 
     /**
      * @brief Update weights matrix (primarily for testing)
-     * @param [newWeights] Matrix for weights to be updated to
+     * @param newWeights - Matrix for weights to be updated to
     */
     void setWeight(const Eigen::MatrixXf& newWeights);
 
     /**
      * @brief Update bias matrix (primarily for testing)
-     * @param [newBias] Matrix for biases to be updated to
+     * @param newBias - Matrix for biases to be updated to
     */
     void setBias(const Eigen::MatrixXf& newBias);
 
@@ -56,8 +61,9 @@ public:
 
     /**
      * @brief Accept the Visitor class to access attributes
+     * @param visitor - Reference to Visitor object to be accepted
     */
-    void accept(Visitor& visit) const;
+    void accept(Visitor& visitor);
 
 private:
     Eigen::VectorXf storedInput;

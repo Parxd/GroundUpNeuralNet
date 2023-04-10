@@ -1,16 +1,25 @@
+#ifndef VISITOR_H
+#define VISITOR_H
+
+#include <ostream>
+
+// Forward declaration
+class Layer;
+
 class Visitor
 {
-private:
-    /* data */
 public:
-    Visitor(/* args */);
-    ~Visitor();
+    virtual ~Visitor() = default;
+    virtual void visit(Layer& layer) = 0;
 };
 
-Visitor::Visitor(/* args */)
+class DescriptionVisitor : public Visitor
 {
-}
+public:
+    explicit DescriptionVisitor(std::ostream& os);
+    void visit(Layer& layer) override;
+private:
+    std::ostream& out;
+};
 
-Visitor::~Visitor()
-{
-}
+#endif

@@ -16,8 +16,13 @@ public:
 class DescriptionVisitor : public Visitor
 {
 public:
-    explicit DescriptionVisitor(std::ostream& os);
-    void visit(Layer& layer) override;
+    explicit DescriptionVisitor(std::ostream& os): out(os)
+    {
+    }
+    void visit(Layer& layer) override
+    {
+        
+    }
 private:
     std::ostream& out;
 };

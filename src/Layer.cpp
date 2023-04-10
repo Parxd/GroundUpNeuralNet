@@ -9,14 +9,14 @@ Layer::Layer(int numInputs, int numOutputs):
 
 void Layer::forward(const Eigen::MatrixXf& input, Eigen::MatrixXf& output)
 {
-    inputs = input;
+    storedInput = input;
     output = input.matrix() * weights.matrix();
     output += bias;
 }
 
 void Layer::backward(const Eigen::MatrixXf& dEW, Eigen::MatrixXf& output)
 {
-    weights = weights - (eta * (inputs.transpose() * dEW));
+    weights = weights - (eta * (storedInput.transpose() * dEW));
     bias = bias - (eta * output);
     output = dEW * weights.transpose();
 }

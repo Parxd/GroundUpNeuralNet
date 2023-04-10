@@ -26,14 +26,15 @@ public:
     /**
      * @brief Set learning rate of this individual layer
      * @param [learningRate] Desired learning rate
-     * @return [NONE]
+     * @return [NONE] Modifies eta attribute in-place
     */
     void setLearningRate(const float& learningRate);
 
 private:
-    Eigen::VectorXf inputs;
+    Eigen::VectorXf storedInput;
     Eigen::MatrixXf weights;
     Eigen::MatrixXf bias;
+    
     int inputFeatures;
     int outputFeatures;
     float eta;

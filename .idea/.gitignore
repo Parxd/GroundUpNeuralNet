@@ -54,5 +54,5 @@ _deps
 *.out
 *.app
 
-/build
-/cmake-build-debug
+/build/
+/cmake-build-debug/

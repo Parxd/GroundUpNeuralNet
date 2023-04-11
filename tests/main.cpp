@@ -1,5 +1,8 @@
 #include <iostream>
+#include "../include/Layer.h"
 
-int main(int, char**) {
-    std::cout << "Hello, world!\n";
+int main(int argc, char** argv) {
+    std::cout << "start" << std::endl;
+    
+    std::cout << "end" << std::endl;
 }

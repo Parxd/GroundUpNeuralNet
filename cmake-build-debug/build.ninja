@@ -220,8 +220,16 @@ build cmake_object_order_depends_target_GroundUpNeuralNet: phony || CMakeFiles/G
 build CMakeFiles/GroundUpNeuralNet.dir/tests/main.cpp.o: CXX_COMPILER__GroundUpNeuralNet_Debug /home/parxed/code/projects/GroundUpNeuralNet/tests/main.cpp || cmake_object_order_depends_target_GroundUpNeuralNet
   DEP_FILE = CMakeFiles/GroundUpNeuralNet.dir/tests/main.cpp.o.d
   FLAGS = -g -fdiagnostics-color=always
+  INCLUDES = -I/home/parxed/code/projects/GroundUpNeuralNet/include
   OBJECT_DIR = CMakeFiles/GroundUpNeuralNet.dir
   OBJECT_FILE_DIR = CMakeFiles/GroundUpNeuralNet.dir/tests
+
+build CMakeFiles/GroundUpNeuralNet.dir/src/Layer.cpp.o: CXX_COMPILER__GroundUpNeuralNet_Debug /home/parxed/code/projects/GroundUpNeuralNet/src/Layer.cpp || cmake_object_order_depends_target_GroundUpNeuralNet
+  DEP_FILE = CMakeFiles/GroundUpNeuralNet.dir/src/Layer.cpp.o.d
+  FLAGS = -g -fdiagnostics-color=always
+  INCLUDES = -I/home/parxed/code/projects/GroundUpNeuralNet/include
+  OBJECT_DIR = CMakeFiles/GroundUpNeuralNet.dir
+  OBJECT_FILE_DIR = CMakeFiles/GroundUpNeuralNet.dir/src
 
 
 # =============================================================================
@@ -231,7 +239,7 @@ build CMakeFiles/GroundUpNeuralNet.dir/tests/main.cpp.o: CXX_COMPILER__GroundUpN
 #############################################
 # Link the executable GroundUpNeuralNet
 
-build GroundUpNeuralNet: CXX_EXECUTABLE_LINKER__GroundUpNeuralNet_Debug CMakeFiles/GroundUpNeuralNet.dir/tests/main.cpp.o
+build GroundUpNeuralNet: CXX_EXECUTABLE_LINKER__GroundUpNeuralNet_Debug CMakeFiles/GroundUpNeuralNet.dir/tests/main.cpp.o CMakeFiles/GroundUpNeuralNet.dir/src/Layer.cpp.o
   FLAGS = -g
   LINK_FLAGS = -rdynamic
   OBJECT_DIR = CMakeFiles/GroundUpNeuralNet.dir

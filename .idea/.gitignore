@@ -55,6 +55,4 @@ _deps
 *.app
 
 /build
-
-
-/build
+/cmake-build-debug

@@ -1,5 +1,5 @@
-#ifndef LAYER_H
-#define LAYER_H
+#ifndef LINEAR_H
+#define LINEAR_H
 
 #include "BaseModule.h"
 #include "Visitor.h"
@@ -7,7 +7,7 @@
 // Forward declaration
 class BaseModule;
 
-class Layer : public BaseModule
+class Linear : public BaseModule
 {
 public:
     /**
@@ -15,9 +15,9 @@ public:
      * @param numInputs - The number of incoming neuron activations from the previous layer 
      * @param numOutputs - The number of outgoing neuron activations--also the number of nodes of this layer
     */
-    Layer(int numInputs, int numOutputs);
+    Linear(int numInputs, int numOutputs);
 
-    ~Layer() = default;
+    ~Linear() = default;
     
     /**
      * @brief Feedforward method of a linear layer class
@@ -57,21 +57,24 @@ public:
      * @brief Retrieve weights matrix
      * @return Const. reference to internal weights matrix
     */
-    const Eigen::MatrixXf& getWeight() const;
+    [[nodiscard]] const Eigen::MatrixXf& getWeight() const;
     
     /**
      * @brief Retrieve bias matrix
      * @return Const. reference to internal bias matrix.
     */
-    const Eigen::MatrixXf& getBias() const;
+    [[nodiscard]] const Eigen::MatrixXf& getBias() const;
     
     /**
-     * @brief Accept the Visitor class to access attributes
+     * @brief Accept the Visitor class
      * @param visitor - Reference to Visitor object to be accepted
     */
     void accept(Visitor& visitor);
 
+    std::string getName() override;
+
 private:
+    std::string name = "Linear";
     Eigen::VectorXf storedInput;
     Eigen::MatrixXf weights;
     Eigen::MatrixXf bias;

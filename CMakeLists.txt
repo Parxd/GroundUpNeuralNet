@@ -11,7 +11,8 @@ include_directories(
 set(
     SOURCE_FILES
     tests/main.cpp
-    src/Layer.cpp
+    src/Linear.cpp
+    src/RELU.cpp
     
     )
 

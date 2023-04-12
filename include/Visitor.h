@@ -3,9 +3,10 @@
 
 #include <ostream>
 #include <string>
+#include "../include/BaseModule.h"
 
 // Forward declaration
-class Layer;
+class BaseModule;
 
 class Visitor
 {

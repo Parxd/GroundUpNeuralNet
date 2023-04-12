@@ -29,13 +29,14 @@ include_directories(
 set(
     SOURCE_FILES
 
-    src/Linear.cpp
-    src/RELU.cpp
+    src/layers/Linear.cpp
+    src/layers/activations/RELU.cpp
+    src/layers/activations/Sigmoid.cpp
+    src/layers/activations/Softmax.cpp
 
     tests/main.cpp
     tests/unit/LinearTest.cpp
     tests/unit/RELUTest.cpp
-    tests/unit/VisitorTest.cpp
 
     )
 

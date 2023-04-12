@@ -1,7 +1,7 @@
-#include "../include/Linear.h"
+#include "../include/layers/Linear.h"
 
-Linear::Linear(int numInputs, int numOutputs):
-    inputFeatures(numInputs), outputFeatures(numOutputs), eta()
+Linear::Linear(int numInputs, int numOutputs, float lR):
+    inputFeatures(numInputs), outputFeatures(numOutputs), eta(lR)
 {
     weights = Eigen::MatrixXf::Random(inputFeatures, outputFeatures);
     bias = Eigen::MatrixXf::Random(1, outputFeatures);
@@ -19,6 +19,11 @@ void Linear::backward(const Eigen::MatrixXf& dEW, Eigen::MatrixXf& output)
     weights = weights - (eta * (storedInput.transpose() * dEW));
     bias = bias - (eta * output);
     output = dEW * weights.transpose();
+}
+
+std::string Linear::description() const
+{
+    return "Linear layer with " + std::to_string(inputFeatures) + " input nodes and " + std::to_string(outputFeatures) + " output nodes" + " (LR: " + std::to_string(eta) + ")";
 }
 
 void Linear::setLearningRate(const float& learningRate)
@@ -44,14 +49,4 @@ const Eigen::MatrixXf& Linear::getWeight() const
 const Eigen::MatrixXf& Linear::getBias() const
 {
     return bias;
-}
-
-void Linear::accept(Visitor& visitor)
-{
-    visitor.visit(*this);
-}
-
-std::string Linear::getName()
-{
-    return name;
 }

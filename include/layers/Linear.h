@@ -2,7 +2,6 @@
 #define LINEAR_H
 
 #include "BaseModule.h"
-#include "Visitor.h"
 
 // Forward declaration
 class BaseModule;
@@ -15,7 +14,7 @@ public:
      * @param numInputs - The number of incoming neuron activations from the previous layer 
      * @param numOutputs - The number of outgoing neuron activations--also the number of nodes of this layer
     */
-    Linear(int numInputs, int numOutputs);
+    Linear(int numInputs, int numOutputs, float lR);
 
     ~Linear() = default;
     
@@ -34,6 +33,12 @@ public:
      * @return [NONE] Modifies output matrix (& weights/biases) in-place
     */
     void backward(const Eigen::MatrixXf& dEW, Eigen::MatrixXf& output) override;
+
+    /**
+     * @brief Returns a string description of this linear layer
+     * @return Description string
+    */
+    std::string description() const override;
     
     /**
      * @brief Set learning rate of this individual layer
@@ -64,17 +69,8 @@ public:
      * @return Const. reference to internal bias matrix.
     */
     [[nodiscard]] const Eigen::MatrixXf& getBias() const;
-    
-    /**
-     * @brief Accept the Visitor class
-     * @param visitor - Reference to Visitor object to be accepted
-    */
-    void accept(Visitor& visitor);
-
-    std::string getName() override;
 
 private:
-    std::string name = "Linear";
     Eigen::VectorXf storedInput;
     Eigen::MatrixXf weights;
     Eigen::MatrixXf bias;

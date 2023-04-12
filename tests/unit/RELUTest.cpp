@@ -1,2 +1,2 @@
-#include "../../include/RELU.h"
+#include "../../include/layers/activations/RELU.h"
 

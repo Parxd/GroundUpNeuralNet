@@ -1,2 +1,2 @@
-#include "../../include/Linear.h"
+#include "../../include/layers/Linear.h"
 

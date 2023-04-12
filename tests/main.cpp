@@ -1,11 +1,13 @@
 #include <iostream>
 #include <gtest/gtest.h>
-#include "../include/Linear.h"
-#include "../include/Visitor.h"
+#include "../include/layers/Linear.h"
+#include "../include/layers/activations/RELU.h"
 
 int main(int argc, char** argv) {
-    ::testing::InitGoogleTest(&argc, argv);
-    return RUN_ALL_TESTS();
+    // ::testing::InitGoogleTest(&argc, argv);
+    // return RUN_ALL_TESTS();
+    Linear layer(3, 5, 0.001);
+    std::cout << layer.description() + " <--- 0\n";
 
-    // return 0;
+    return 0;
 }

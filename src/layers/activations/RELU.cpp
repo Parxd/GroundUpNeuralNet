@@ -1,4 +1,4 @@
-#include "../include/RELU.h"
+#include "../../../include/layers/activations/RELU.h"
 
 void RELU::forward(const Eigen::MatrixXf& input, Eigen::MatrixXf& output)
 {
@@ -9,14 +9,4 @@ void RELU::forward(const Eigen::MatrixXf& input, Eigen::MatrixXf& output)
 void RELU::backward(const Eigen::MatrixXf& input, Eigen::MatrixXf& output)
 {
     output = input.array().unaryExpr([] (float x) -> float {return float(bool(x > 0) * 1); });
-}
-
-void RELU::accept(Visitor& visitor)
-{
-    visitor.visit(*this);
-}
-
-std::string RELU::getName()
-{
-    return name;
 }

@@ -38,25 +38,25 @@ public:
      * @brief Getter for name (linear)
      * @return Name string
     */
-    const std::string getName() const override;
+    [[nodiscard]] const std::string getName() const override;
 
     /**
      * @brief Getter for number of input nodes
      * @return Number of input features
     */
-    const int getInputs() const override;
+    [[nodiscard]] const int getInputs() const override;
 
     /**
      * @brief Getter for number of output nodes
      * @return Number of output features
     */
-    const int getOutputs() const override;
+    [[nodiscard]] const int getOutputs() const override;
 
     /**
      * @brief Getter for learning rate
      * @return Learning rate value
     */
-    const float getLR() const override;
+    [[nodiscard]] const float getLR() const override;
 
     /**
      * @brief Set learning rate of this individual layer

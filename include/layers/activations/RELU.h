@@ -27,7 +27,7 @@ public:
     */
     void backward(const Eigen::MatrixXf& input, Eigen::MatrixXf& output) override;
 
-    const std::string getName() const override;
+    [[nodiscard]] const std::string getName() const override;
 
 private:
     Eigen::MatrixXf storedInput;

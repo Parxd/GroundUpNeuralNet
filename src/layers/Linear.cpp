@@ -1,17 +1,18 @@
 #include "../include/layers/Linear.h"
+#include <iostream>
 
 Linear::Linear(int numInputs, int numOutputs, float lR):
     inputFeatures(numInputs), outputFeatures(numOutputs), eta(lR)
 {
-    weights = Eigen::MatrixXf::Random(inputFeatures, outputFeatures);
-    bias = Eigen::MatrixXf::Random(1, outputFeatures);
+    weights = Eigen::MatrixXf::Random(outputFeatures, inputFeatures);
+    bias = Eigen::MatrixXf::Random(outputFeatures, 1);
 }
 
 void Linear::forward(const Eigen::MatrixXf& input, Eigen::MatrixXf& output)
 {
+    assert(input.cols() == 1);
     storedInput = input;
-    output = input.matrix() * weights.matrix();
-    output += bias;
+    output = weights * input + bias;
 }
 
 void Linear::backward(const Eigen::MatrixXf& dEW, Eigen::MatrixXf& output)
@@ -48,11 +49,13 @@ void Linear::setLearningRate(const float& learningRate)
 
 void Linear::setWeight(const Eigen::MatrixXf& newWeights)
 {
+    assert(newWeights.rows() ==  outputFeatures && newWeights.cols() == inputFeatures);
     weights = newWeights;
 }
 
 void Linear::setBias(const Eigen::MatrixXf& newBias)
 {
+    assert(bias.rows() == outputFeatures);
     bias = newBias;
 }
 

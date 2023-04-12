@@ -35,11 +35,29 @@ public:
     void backward(const Eigen::MatrixXf& dEW, Eigen::MatrixXf& output) override;
 
     /**
-     * @brief Returns a string description of this linear layer
-     * @return Description string
+     * @brief Getter for name (linear)
+     * @return Name string
     */
-    std::string description() const override;
-    
+    const std::string getName() const override;
+
+    /**
+     * @brief Getter for number of input nodes
+     * @return Number of input features
+    */
+    const int getInputs() const override;
+
+    /**
+     * @brief Getter for number of output nodes
+     * @return Number of output features
+    */
+    const int getOutputs() const override;
+
+    /**
+     * @brief Getter for learning rate
+     * @return Learning rate value
+    */
+    const float getLR() const override;
+
     /**
      * @brief Set learning rate of this individual layer
      * @param learningRate - Desired learning rate

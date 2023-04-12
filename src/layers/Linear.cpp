@@ -21,9 +21,24 @@ void Linear::backward(const Eigen::MatrixXf& dEW, Eigen::MatrixXf& output)
     output = dEW * weights.transpose();
 }
 
-std::string Linear::description() const
+const std::string Linear::getName() const
 {
-    return "Linear layer with " + std::to_string(inputFeatures) + " input nodes and " + std::to_string(outputFeatures) + " output nodes" + " (LR: " + std::to_string(eta) + ")";
+    return "Linear";
+}
+
+const int Linear::getInputs() const
+{
+    return inputFeatures;
+}
+
+const int Linear::getOutputs() const
+{
+    return outputFeatures;
+}
+
+const float Linear::getLR() const
+{
+    return eta;
 }
 
 void Linear::setLearningRate(const float& learningRate)

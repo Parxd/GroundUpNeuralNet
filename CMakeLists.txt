@@ -33,6 +33,7 @@ set(
     src/layers/activations/RELU.cpp
     src/layers/activations/Sigmoid.cpp
     src/layers/activations/Softmax.cpp
+    src/losses/MSE.cpp
 
     tests/main.cpp
     tests/unit/LinearTest.cpp

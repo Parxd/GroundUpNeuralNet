@@ -53,3 +53,22 @@ TEST(LinearTest, test0)
     layer.forward(input, result);
     EXPECT_EQ(answer, result);
 }
+
+TEST(LinearTest, test1)
+{
+    // Create data
+    srand(time(0));
+    std::vector<float> input(768);
+    for (int i = 0; i < 768; ++i)
+    {
+        input[i] = (float)(rand()) / (float)(rand());
+    }
+    Eigen::MatrixXf inputMatrix = Eigen::Map<Eigen::Matrix<float, 768, 1>>(input.data());
+    Eigen::MatrixXf result;
+
+    Linear layer(768, 20, 0.001);
+    layer.forward(inputMatrix, result);
+    EXPECT_EQ(result.rows(), 20);
+    EXPECT_EQ(result.cols(), 1);
+    EXPECT_EQ(result, layer.getWeight() * inputMatrix + layer.getBias());
+}

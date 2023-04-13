@@ -21,6 +21,7 @@ FetchContent_Declare(
     GIT_REPOSITORY https://gitlab.com/libeigen/eigen.git
     GIT_TAG 3.4.0
 )
+FetchContent_GetProperties(eigen)
 FetchContent_MakeAvailable(eigen)
 
 if (NOT googletest_POPULATED)
@@ -29,6 +30,13 @@ if (NOT googletest_POPULATED)
 endif()
 
 include_directories(${googletest_SOURCE_DIR}/googletest/include)
+
+if (NOT eigen_POPULATED)
+    FetchContent_Populate(eigen)
+    add_subdirectory(${eigen_SOURCE_DIR} ${eigen_BINARY_DIR})
+endif()
+
+include_directories(${eigen_SOURCE_DIR}/eigen/include)
 include_directories(
     ${PROJECT_SOURCE_DIR}/include
 )
@@ -54,4 +62,5 @@ set(CPACK_PROJECT_NAME ${PROJECT_NAME})
 set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
 add_dependencies(GroundUpNeuralNet gtest)
 target_link_libraries(GroundUpNeuralNet gtest ${CMAKE_THREAD_LIBS_INIT})
+target_link_libraries(GroundUpNeuralNet eigen ${CMAKE_THREAD_LIBS_INIT})
 include(CPack)

@@ -10,7 +10,7 @@ Linear::Linear(int numInputs, int numOutputs, float lR):
 
 void Linear::forward(const Eigen::MatrixXf& input, Eigen::MatrixXf& output)
 {
-    assert(input.cols() == 1);
+    assert(input.cols() == 1 && input.rows() == inputFeatures);
     storedInput = input;
     output = weights * input + bias;
 }

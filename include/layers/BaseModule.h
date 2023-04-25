@@ -1,7 +1,7 @@
 #ifndef BASEMODULE_H
 #define BASEMODULE_H
 
-#include <Eigen/Dense>
+
 
 class BaseModule
 {

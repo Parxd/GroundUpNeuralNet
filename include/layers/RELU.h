@@ -1,7 +1,7 @@
 #ifndef RELU_H
 #define RELU_H
 
-#include "../BaseModule.h"
+#include "BaseModule.h"
 
 // Forward declaration
 class BaseModule;

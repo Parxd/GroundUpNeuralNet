@@ -1,4 +1,4 @@
-#include "../include/layers/Linear.h"
+#include "../../include/layers/Linear.h"
 #include <iostream>
 
 Linear::Linear(int numInputs, int numOutputs, float lR):

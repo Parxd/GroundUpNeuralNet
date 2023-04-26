@@ -1,5 +1,6 @@
-#include <iostream>
+#include <Eigen/Dense>
 
-int main() {
-    std::cout << "hello" << std::endl;
+int main(int argc, char** argv)
+{
+    return 0;
 }

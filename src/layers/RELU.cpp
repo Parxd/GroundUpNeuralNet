@@ -1,4 +1,4 @@
-#include "layers/RELU.h"
+#include "../../include/layers/RELU.h"
 
 void RELU::forward(const Eigen::MatrixXf& input, Eigen::MatrixXf& output)
 {

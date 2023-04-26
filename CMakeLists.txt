@@ -1,22 +1,63 @@
-cmake_minimum_required(VERSION 3.24)
-project(GNN)
+cmake_minimum_required(VERSION 3.2.4)
+project(GNN VERSION 0.1.0)
 
-set(CMAKE_CXX_STANDARD 17)
-set(CMAKE_CXX_STANDARD_REQUIRED ON)
-set(CMAKE_CXX_EXTENSIONS OFF)
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -g")
+include(CTest)
+enable_testing()
 
-include_directories("./include")
+set(CMAKE_CXX_FLAGS_TEST "${CMAKE_CXX_FLAGS_TEST} -DTEST_MODE")
+set(CMAKE_CXX_FLAGS_TRAIN "${CMAKE_CXX_FLAGS_TRAIN} -DTRAIN_MODE")
 
-add_library(Core STATIC)
-add_subdirectory(./src)
+add_executable(GNN_test ./tests/main.cpp) # test configuration
+add_executable(GNN_train ./src/main.cpp) # train configuration
 
-# Build GTest automated testing suite
-add_executable(test)
-add_subdirectory(./tests)
-add_dependencies(test gtest Core)
-target_link_libraries(test gtest ${CMAKE_THREAD_LIBS_INIT})
-target_link_libraries(test Core)
+target_sources(GNN_test PRIVATE
+            ./tests/unit/LinearTest.cpp
+            ./tests/unit/RELUTest.cpp
+        )
 
-add_executable(GNN ./src/main.cpp)
-target_link_libraries(GNN Core)
+target_sources(GNN_train PRIVATE
+        ./src/layers/Linear.cpp
+        ./src/layers/RELU.cpp
+        ./src/layers/Sigmoid.cpp
+        ./src/layers/Softmax.cpp
+
+        ./src/losses/CE.cpp
+        ./src/losses/MSE.cpp
+        )
+
+target_compile_options(GNN_test PRIVATE -DTEST_MODE)
+target_compile_options(GNN_train PRIVATE -DTRAIN_MODE)
+
+# GTest
+include(FetchContent)
+FetchContent_Declare(
+        googletest
+        GIT_REPOSITORY https://github.com/google/googletest.git
+        GIT_TAG ccdeec888ebb740a7ea4e07d3e84a1b7ee32b315
+)
+FetchContent_GetProperties(googletest)
+FetchContent_MakeAvailable(googletest)
+if(NOT googletest_POPULATED)
+    FetchContent_Populate(googletest)
+    add_subdirectory(${googletest_SOURCE_DIR} ${googletest_BINARY_DIR})
+endif()
+MESSAGE(${googletest_SOURCE_DIR})
+include_directories(${googletest_SOURCE_DIR}/googletest/include)
+
+# Eigen
+FetchContent_Declare(
+        eigen
+        GIT_REPOSITORY https://gitlab.com/libeigen/eigen.git
+        GIT_TAG 3.4.0
+)
+FetchContent_GetProperties(eigen)
+FetchContent_MakeAvailable(eigen)
+if (NOT eigen_POPULATED)
+    FetchContent_Populate(eigen)
+    add_subdirectory(${eigen_SOURCE_DIR} ${eigen_BINARY_DIR})
+endif()
+include_directories(${eigen_SOURCE_DIR}/eigen/include)
+
+# Link Gtest + Eigen
+target_link_libraries(GNN_test gtest_main eigen)
+target_link_libraries(GNN_train eigen)

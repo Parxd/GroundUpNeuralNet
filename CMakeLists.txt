@@ -10,15 +10,18 @@ set(CMAKE_CXX_FLAGS_TRAIN "${CMAKE_CXX_FLAGS_TRAIN} -DTRAIN_MODE")
 add_executable(GNN_test ./tests/main.cpp) # test configuration
 add_executable(GNN_train ./src/main.cpp) # train configuration
 
-file(GLOB SOURCES "/src/*/*.cpp")
-file(GLOB TESTS "/tests/*/*.cpp")
 target_sources(GNN_test PRIVATE
-        ${SOURCES}
-        ${TESTS}
-        )
+        # Source files
+        ./src/layers/Linear.cpp
 
+        # Test files
+        ./tests/unit/LinearTest.cpp
+
+        )
 target_sources(GNN_train PRIVATE
-        ${SOURCES}
+        # Source files
+        ./src/layers/Linear.cpp
+
         )
 
 target_compile_options(GNN_test PRIVATE -DTEST_MODE)

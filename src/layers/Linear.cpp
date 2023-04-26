@@ -10,7 +10,6 @@ Linear::Linear(int numInputs, int numOutputs, float lR):
 
 void Linear::forward(const Eigen::MatrixXf& input, Eigen::MatrixXf& output)
 {
-    assert(input.cols() == 1 && input.rows() == inputFeatures);
     storedInput = input;
     output = weights * input + bias;
 }
@@ -49,13 +48,11 @@ void Linear::setLearningRate(const float& learningRate)
 
 void Linear::setWeight(const Eigen::MatrixXf& newWeights)
 {
-    assert(newWeights.rows() ==  outputFeatures && newWeights.cols() == inputFeatures);
     weights = newWeights;
 }
 
 void Linear::setBias(const Eigen::MatrixXf& newBias)
 {
-    assert(bias.rows() == outputFeatures);
     bias = newBias;
 }
 

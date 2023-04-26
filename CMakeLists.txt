@@ -1,5 +1,5 @@
-cmake_minimum_required(VERSION 3.2.4)
-project(GNN VERSION 0.1.0)
+cmake_minimum_required(VERSION 3.13)
+project(GroundUpNeuralNet VERSION 0.1.0)
 
 include(CTest)
 enable_testing()
@@ -10,21 +10,15 @@ set(CMAKE_CXX_FLAGS_TRAIN "${CMAKE_CXX_FLAGS_TRAIN} -DTRAIN_MODE")
 add_executable(GNN_test ./tests/main.cpp) # test configuration
 add_executable(GNN_train ./src/main.cpp) # train configuration
 
+file(GLOB SOURCES "/src/*/*.cpp")
+file(GLOB TESTS "/tests/*/*.cpp")
 target_sources(GNN_test PRIVATE
-        ./src/layers/Linear.cpp
-
-        ./tests/unit/LinearTest.cpp
-        ./tests/unit/RELUTest.cpp
+        ${SOURCES}
+        ${TESTS}
         )
 
 target_sources(GNN_train PRIVATE
-        ./src/layers/Linear.cpp
-        ./src/layers/RELU.cpp
-        ./src/layers/Sigmoid.cpp
-        ./src/layers/Softmax.cpp
-
-        ./src/losses/CE.cpp
-        ./src/losses/MSE.cpp
+        ${SOURCES}
         )
 
 target_compile_options(GNN_test PRIVATE -DTEST_MODE)

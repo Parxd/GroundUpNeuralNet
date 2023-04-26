@@ -26,7 +26,7 @@ TEST(LinearTest, forward1)
     Linear layer(inputs, outputs, LR);
 
     // Set inputs
-    // NOTE: This assumes the first layer of the network will take in a tranposed vector (.transposeInPlace() on source data)
+    // NOTE: This assumes the first layer of the network will take in a transposed vector (.transposeInPlace() on source data)
     Eigen::MatrixXf input{
         {0.5}, 
         {-0.5}, 

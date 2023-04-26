@@ -11,8 +11,10 @@ add_executable(GNN_test ./tests/main.cpp) # test configuration
 add_executable(GNN_train ./src/main.cpp) # train configuration
 
 target_sources(GNN_test PRIVATE
-            ./tests/unit/LinearTest.cpp
-            ./tests/unit/RELUTest.cpp
+        ./src/layers/Linear.cpp
+
+        ./tests/unit/LinearTest.cpp
+        ./tests/unit/RELUTest.cpp
         )
 
 target_sources(GNN_train PRIVATE

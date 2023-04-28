@@ -1,24 +1,35 @@
 #include "../../include/layers/Linear.h"
 #include <iostream>
 
+Linear::Linear(int numInputs, int numOutputs):
+    inputFeatures(numInputs), outputFeatures(numOutputs)
+{
+    weights = Eigen::MatrixXf::Random(outputFeatures, inputFeatures);
+    bias = Eigen::VectorXf::Random(outputFeatures, 1);
+}
+
 Linear::Linear(int numInputs, int numOutputs, float lR):
     inputFeatures(numInputs), outputFeatures(numOutputs), eta(lR)
 {
     weights = Eigen::MatrixXf::Random(outputFeatures, inputFeatures);
-    bias = Eigen::MatrixXf::Random(outputFeatures, 1);
+    bias = Eigen::VectorXf::Random(outputFeatures, 1);
 }
 
 void Linear::forward(const Eigen::MatrixXf& input, Eigen::MatrixXf& output)
 {
     storedInput = input;
-    output = weights * input + bias;
+    output = weights * input;
+    for (long i = 0; i < output.rows(); ++i) {
+        output.row(i).array() += bias.array();
+    }
 }
 
 void Linear::backward(const Eigen::MatrixXf& dEW, Eigen::MatrixXf& output)
 {
-    weights = weights - (eta * (storedInput.transpose() * dEW));
-    bias = bias - (eta * output);
-    output = dEW * weights.transpose();
+    weights = weights.array() - (eta * (storedInput.transpose() * dEW).array());
+    bias = bias.array() - (eta * dEW.colwise().mean().array());
+    // TODO: Fix this next line
+    output = dEW * weights;
 }
 
 const std::string Linear::getName() const
@@ -43,16 +54,28 @@ const float Linear::getLR() const
 
 void Linear::setLearningRate(const float& learningRate)
 {
+    if (learningRate >= 1)
+    {
+        std::cerr << "Warning: Learning rate greater than 1 may have unwanted effects.";
+    }
     eta = learningRate;
 }
 
-void Linear::setWeight(const Eigen::MatrixXf& newWeights)
+void Linear::setWeight(Eigen::MatrixXf& newWeights)
 {
+    assert(
+            newWeights.cols() == inputFeatures && newWeights.rows() == outputFeatures ||
+            newWeights.cols() == outputFeatures && newWeights.rows() == inputFeatures
+            );
+    if (newWeights.cols() == outputFeatures) {
+        newWeights.transposeInPlace();
+    }
     weights = newWeights;
 }
 
-void Linear::setBias(const Eigen::MatrixXf& newBias)
+void Linear::setBias(Eigen::MatrixXf& newBias)
 {
+    assert(newBias.rows() == outputFeatures);
     bias = newBias;
 }
 
@@ -61,7 +84,7 @@ const Eigen::MatrixXf& Linear::getWeight() const
     return weights;
 }
 
-const Eigen::MatrixXf& Linear::getBias() const
+const Eigen::VectorXf& Linear::getBias() const
 {
     return bias;
 }

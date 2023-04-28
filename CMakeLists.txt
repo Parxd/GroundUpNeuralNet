@@ -13,15 +13,20 @@ add_executable(GNN_train ./src/main.cpp) # train configuration
 target_sources(GNN_test PRIVATE
         # Source files
         ./src/layers/Linear.cpp
+        ./src/layers/RELU.cpp
+
+        ./src/containers/Container.cpp
 
         # Test files
         ./tests/unit/LinearTest.cpp
-
+        ./tests/unit/ContainerTest.cpp
         )
 target_sources(GNN_train PRIVATE
         # Source files
         ./src/layers/Linear.cpp
+        ./src/layers/RELU.cpp
 
+        ./src/containers/Container.cpp
         )
 
 target_compile_options(GNN_test PRIVATE -DTEST_MODE)

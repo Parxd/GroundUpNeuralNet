@@ -10,13 +10,21 @@ class Linear : public BaseModule
 {
 public:
     /**
-     * @brief Sole constructor of an individual fully-connected layer class
+     * @brief Main constructor of an individual fully-connected layer class
+     * @param numInputs - The number of incoming neuron activations from the previous layer
+     * @param numOutputs - The number of outgoing neuron activations--also the number of nodes of this layer
+    */
+    Linear(int numInputs, int numOutputs);
+
+    /**
+     * @brief Alt constructor of an individual fully-connected layer class
      * @param numInputs - The number of incoming neuron activations from the previous layer 
      * @param numOutputs - The number of outgoing neuron activations--also the number of nodes of this layer
+     * @param lR - Learning rate of this layer
     */
     Linear(int numInputs, int numOutputs, float lR);
 
-    ~Linear() = default;
+    ~Linear() override = default;
     
     /**
      * @brief Feedforward method of a linear layer class
@@ -68,13 +76,13 @@ public:
      * @brief Update weights matrix (primarily for testing)
      * @param newWeights - Matrix for weights to be updated to
     */
-    void setWeight(const Eigen::MatrixXf& newWeights);
+    void setWeight(Eigen::MatrixXf& newWeights);
     
     /**
      * @brief Update bias matrix (primarily for testing)
      * @param newBias - Matrix for biases to be updated to
     */
-    void setBias(const Eigen::MatrixXf& newBias);
+    void setBias(Eigen::MatrixXf& newBias);
     
     /**
      * @brief Retrieve weights matrix
@@ -86,16 +94,16 @@ public:
      * @brief Retrieve bias matrix
      * @return Const. reference to internal bias matrix.
     */
-    [[nodiscard]] const Eigen::MatrixXf& getBias() const;
+    [[nodiscard]] const Eigen::VectorXf& getBias() const;
 
 private:
     Eigen::VectorXf storedInput;
     Eigen::MatrixXf weights;
-    Eigen::MatrixXf bias;
+    Eigen::VectorXf bias;
     
     int inputFeatures;
     int outputFeatures;
-    float eta;
+    float eta = 0.001;
 };
 
 #endif

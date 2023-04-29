@@ -10,16 +10,16 @@ public:
     virtual ~BaseModule() = default;
     virtual void forward(const Eigen::MatrixXf& input, Eigen::MatrixXf& output) = 0;
     virtual void backward(const Eigen::MatrixXf& dEW, Eigen::MatrixXf& output) = 0;
-    virtual const std::string getName() const = 0;
-    virtual const int getInputs() const
+    [[nodiscard]] virtual std::string getName() const = 0;
+    [[nodiscard]] virtual int getInputs() const
     {
         return 0;
     }
-    virtual const int getOutputs() const
+    [[nodiscard]] virtual int getOutputs() const
     {
         return 0;
     }
-    virtual const float getLR() const
+    [[nodiscard]] virtual float getLR() const
     {
         return 0.0f;
     }

@@ -1500,6 +1500,8 @@
       <change beforePath="$PROJECT_DIR$/include/layers/Linear.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/layers/Linear.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/include/layers/RELU.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/layers/RELU.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/containers/Container.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Container.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layers/Linear.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/layers/Linear.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layers/RELU.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/layers/RELU.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/unit/ContainerTest.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/tests/unit/ContainerTest.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -10455,7 +10457,7 @@
       <workItem from="1682659448363" duration="1853000" />
       <workItem from="1682700710233" duration="13815000" />
       <workItem from="1682720414640" duration="1000" />
-      <workItem from="1682722272527" duration="7297000" />
+      <workItem from="1682722272527" duration="10465000" />
     </task>
     <servers />
   </component>

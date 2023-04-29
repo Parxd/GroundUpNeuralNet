@@ -7,15 +7,8 @@ namespace {
 
     TEST(ContainerTest, construction) {
         Container cont(
-                new Linear(2, 5),
-                new RELU(),
-                new Linear(5, 6)
-        );
-        cont.view();
-
-        Container c(
-                std::make_unique<Linear>(3, 5).release();
+                Linear::make(3, 5)
                 );
-        c.view();
+        cont.view();
     }
 }

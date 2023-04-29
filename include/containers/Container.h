@@ -17,11 +17,14 @@ public:
 
     /*
      * @brief Variadic constructor
-     * @param layer - Variable number of raw BaseModule pointers
+     * @param layer - Variable number of std::unique BaseModule pointers
      * @return Container object with layers added to internal vector
      */
     template<typename... T>
-    explicit Container(T*... layer);
+    explicit Container(std::unique_ptr<T>&&... layer)
+    {
+        (mLayers.push_back(std::move(layer)), ...);
+    }
 
     /*
      * @brief Prints order and description of each layer in internal vector

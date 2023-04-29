@@ -11,7 +11,7 @@ void RELU::backward(const Eigen::MatrixXf& input, Eigen::MatrixXf& output)
     output = input.array().unaryExpr([] (float x) -> float {return float(bool(x > 0) * 1); });
 }
 
-const std::string RELU::getName() const
+std::string RELU::getName() const
 {
-    return "RELU";
+    return "ReLU";
 }

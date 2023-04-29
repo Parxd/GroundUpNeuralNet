@@ -9,7 +9,7 @@ class BaseModule;
 class Linear : public BaseModule
 {
 public:
-
+    static std::unique_ptr<Linear> make(int numInputs, int numOutputs);
 
     /**
      * @brief Main constructor of an individual fully-connected layer class
@@ -48,25 +48,25 @@ public:
      * @brief Getter for name (linear)
      * @return Name string
     */
-    [[nodiscard]] const std::string getName() const override;
+    [[nodiscard]] std::string getName() const override;
 
     /**
      * @brief Getter for number of input nodes
      * @return Number of input features
     */
-    [[nodiscard]] const int getInputs() const override;
+    [[nodiscard]] int getInputs() const override;
 
     /**
      * @brief Getter for number of output nodes
      * @return Number of output features
     */
-    [[nodiscard]] const int getOutputs() const override;
+    [[nodiscard]] int getOutputs() const override;
 
     /**
      * @brief Getter for learning rate
      * @return Learning rate value
     */
-    [[nodiscard]] const float getLR() const override;
+    [[nodiscard]] float getLR() const override;
 
     /**
      * @brief Set learning rate of this individual layer

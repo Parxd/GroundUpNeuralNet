@@ -1,6 +1,10 @@
 #include "../../include/layers/Linear.h"
 #include <iostream>
 
+std::unique_ptr<Linear> Linear::make(int numInputs, int numOutputs) {
+    return std::make_unique<Linear>(numInputs, numOutputs);
+}
+
 Linear::Linear(int numInputs, int numOutputs):
     inputFeatures(numInputs), outputFeatures(numOutputs)
 {
@@ -32,22 +36,22 @@ void Linear::backward(const Eigen::MatrixXf& dEW, Eigen::MatrixXf& output)
     output = dEW * weights;
 }
 
-const std::string Linear::getName() const
+std::string Linear::getName() const
 {
     return "Linear";
 }
 
-const int Linear::getInputs() const
+int Linear::getInputs() const
 {
     return inputFeatures;
 }
 
-const int Linear::getOutputs() const
+int Linear::getOutputs() const
 {
     return outputFeatures;
 }
 
-const float Linear::getLR() const
+float Linear::getLR() const
 {
     return eta;
 }

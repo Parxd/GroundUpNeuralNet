@@ -15,6 +15,17 @@ public:
     ~Container() = default;
 
     /*
+     * @brief PREFERRED variadic constructor - accepts std::unique_ptr from BaseModule layer factories
+     * @param layer - Variable number of RAW BaseModule pointers
+     * @return Container object with layers added to internal vector
+     */
+    template<typename... T>
+    explicit Container(std::unique_ptr<T>&&... layer)
+    {
+        (mLayers.push_back(std::move(layer)), ...);
+    }
+
+    /*
      * @brief Variadic constructor - converts raw base pointers into std::unique_ptr for trivial destruction
      * @param layer - Variable number of RAW BaseModule pointers
      * @return Container object with layers added to internal vector

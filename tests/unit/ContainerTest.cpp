@@ -13,9 +13,10 @@ namespace {
                 );
         cont.view();
 
-        std::vector<std::unique_ptr<BaseModule>> vect;
-        vect.push_back(std::make_unique<Linear>(784, 23));
-        Container cont2(vect);
+        std::cout << "\n";
+        std::vector<std::unique_ptr<BaseModule>> vector;
+        vector.push_back(std::make_unique<Linear>(784, 23));
+        Container cont2(vector);
         cont2.view();
     }
 }

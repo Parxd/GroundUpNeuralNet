@@ -4,7 +4,6 @@
 #include <memory>
 #include <iostream>
 #include <vector>
-#include <initializer_list>
 #include "../layers/BaseModule.h"
 #include "../layers/Linear.h"
 

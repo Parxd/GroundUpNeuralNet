@@ -8,13 +8,6 @@ Linear::Linear(int numInputs, int numOutputs):
     bias = Eigen::VectorXf::Random(outputFeatures, 1);
 }
 
-Linear::Linear(int numInputs, int numOutputs, float lR):
-    inputFeatures(numInputs), outputFeatures(numOutputs), eta(lR)
-{
-    weights = Eigen::MatrixXf::Random(outputFeatures, inputFeatures);
-    bias = Eigen::VectorXf::Random(outputFeatures, 1);
-}
-
 void Linear::forward(const Eigen::MatrixXf& input, Eigen::MatrixXf& output)
 {
     storedInput = input;

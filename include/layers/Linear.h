@@ -16,14 +16,6 @@ public:
     */
     Linear(int numInputs, int numOutputs);
 
-    /**
-     * @brief Alt constructor of an individual fully-connected layer class
-     * @param numInputs - The number of incoming neuron activations from the previous layer 
-     * @param numOutputs - The number of outgoing neuron activations--also the number of nodes of this layer
-     * @param lR - Learning rate of this layer
-    */
-    Linear(int numInputs, int numOutputs, float lR);
-
     ~Linear() override = default;
     
     /**

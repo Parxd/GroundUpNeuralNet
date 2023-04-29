@@ -111,10 +111,13 @@
       <config projectName="GroundUpNeuralNet" targetName="ContinuousCoverage" />
       <config projectName="GroundUpNeuralNet" targetName="product_selfadjoint" />
       <config projectName="GroundUpNeuralNet" targetName="geo_eulerangles_2" />
+      <config projectName="GroundUpNeuralNet" targetName="sblat1" />
+      <config projectName="GroundUpNeuralNet" targetName="sblat2" />
       <config projectName="GroundUpNeuralNet" targetName="compile_Cwise_product" />
       <config projectName="GroundUpNeuralNet" targetName="compile_MatrixBase_array" />
       <config projectName="GroundUpNeuralNet" targetName="conservative_resize" />
       <config projectName="GroundUpNeuralNet" targetName="geo_eulerangles_1" />
+      <config projectName="GroundUpNeuralNet" targetName="sblat3" />
       <config projectName="GroundUpNeuralNet" targetName="diagonal_on_const_type_actually_const_ko" />
       <config projectName="GroundUpNeuralNet" targetName="array_cwise" />
       <config projectName="GroundUpNeuralNet" targetName="numext" />
@@ -345,6 +348,9 @@
       <config projectName="GroundUpNeuralNet" targetName="product_syrk_3" />
       <config projectName="GroundUpNeuralNet" targetName="compile_Tutorial_std_sort_rows_cxx11" />
       <config projectName="GroundUpNeuralNet" targetName="product_syrk_2" />
+      <config projectName="GroundUpNeuralNet" targetName="cblat3" />
+      <config projectName="GroundUpNeuralNet" targetName="cblat2" />
+      <config projectName="GroundUpNeuralNet" targetName="cblat1" />
       <config projectName="GroundUpNeuralNet" targetName="qr_2" />
       <config projectName="GroundUpNeuralNet" targetName="qr_3" />
       <config projectName="GroundUpNeuralNet" targetName="sparse_ref_3_ok" />
@@ -565,6 +571,7 @@
       <config projectName="GroundUpNeuralNet" targetName="compile_MatrixBase_template_int_int_bottomLeftCorner_int_int" />
       <config projectName="GroundUpNeuralNet" targetName="ternary_2_ko" />
       <config projectName="GroundUpNeuralNet" targetName="mixingtypes" />
+      <config projectName="GroundUpNeuralNet" targetName="zblat3" />
       <config projectName="GroundUpNeuralNet" targetName="compile_SelfAdjointEigenSolver_compute_MatrixType" />
       <config projectName="GroundUpNeuralNet" targetName="compile_Map_outer_stride" />
       <config projectName="GroundUpNeuralNet" targetName="splines" />
@@ -640,6 +647,8 @@
       <config projectName="GroundUpNeuralNet" targetName="compile_DenseBase_LinSpaced" />
       <config projectName="GroundUpNeuralNet" targetName="nomalloc_4" />
       <config projectName="GroundUpNeuralNet" targetName="nomalloc_5" />
+      <config projectName="GroundUpNeuralNet" targetName="zblat1" />
+      <config projectName="GroundUpNeuralNet" targetName="zblat2" />
       <config projectName="GroundUpNeuralNet" targetName="class_CwiseUnaryOp_ptrfun" />
       <config projectName="GroundUpNeuralNet" targetName="ExperimentalBuild" />
       <config projectName="GroundUpNeuralNet" targetName="swap_2_ok" />
@@ -1333,6 +1342,9 @@
       <config projectName="GroundUpNeuralNet" targetName="sparse_permutations_1" />
       <config projectName="GroundUpNeuralNet" targetName="compile_ComplexSchur_compute" />
       <config projectName="GroundUpNeuralNet" targetName="compile_Tutorial_solve_singular" />
+      <config projectName="GroundUpNeuralNet" targetName="dblat3" />
+      <config projectName="GroundUpNeuralNet" targetName="dblat2" />
+      <config projectName="GroundUpNeuralNet" targetName="dblat1" />
       <config projectName="GroundUpNeuralNet" targetName="rvalue_types_4" />
       <config projectName="GroundUpNeuralNet" targetName="rvalue_types_5" />
       <config projectName="GroundUpNeuralNet" targetName="Tutorial_ReductionsVisitorsBroadcasting_reductions_operatornorm" />
@@ -1497,9 +1509,9 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/include/containers/Container.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/containers/Container.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/include/layers/Linear.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/layers/Linear.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/Container.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Container.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/layers/Linear.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/layers/Linear.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/unit/ContainerTest.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/tests/unit/ContainerTest.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/unit/LinearTest.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/tests/unit/LinearTest.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -1565,6 +1577,11 @@
     </option>
   </component>
   <component name="RunManager" selected="Google Test.GNN_test">
+    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="GNN_test" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="GroundUpNeuralNet" TARGET_NAME="GNN_test" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="GroundUpNeuralNet" RUN_TARGET_NAME="GNN_test" TEST_MODE="SUITE_TEST">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -2667,6 +2684,21 @@
       </method>
     </configuration>
     <configuration name="buildtests" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="GroundUpNeuralNet" TARGET_NAME="buildtests" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="cblat1" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="GroundUpNeuralNet" TARGET_NAME="cblat1" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="GroundUpNeuralNet" RUN_TARGET_NAME="cblat1">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="cblat2" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="GroundUpNeuralNet" TARGET_NAME="cblat2" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="GroundUpNeuralNet" RUN_TARGET_NAME="cblat2">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="cblat3" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="GroundUpNeuralNet" TARGET_NAME="cblat3" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="GroundUpNeuralNet" RUN_TARGET_NAME="cblat3">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -4427,6 +4459,21 @@
       </method>
     </configuration>
     <configuration name="cwiseunaryview_on_const_type_actually_const_ok" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="GroundUpNeuralNet" TARGET_NAME="cwiseunaryview_on_const_type_actually_const_ok" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="GroundUpNeuralNet" RUN_TARGET_NAME="cwiseunaryview_on_const_type_actually_const_ok">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="dblat1" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="GroundUpNeuralNet" TARGET_NAME="dblat1" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="GroundUpNeuralNet" RUN_TARGET_NAME="dblat1">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="dblat2" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="GroundUpNeuralNet" TARGET_NAME="dblat2" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="GroundUpNeuralNet" RUN_TARGET_NAME="dblat2">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="dblat3" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="GroundUpNeuralNet" TARGET_NAME="dblat3" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="GroundUpNeuralNet" RUN_TARGET_NAME="dblat3">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -7736,6 +7783,21 @@
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
+    <configuration name="sblat1" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="GroundUpNeuralNet" TARGET_NAME="sblat1" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="GroundUpNeuralNet" RUN_TARGET_NAME="sblat1">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="sblat2" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="GroundUpNeuralNet" TARGET_NAME="sblat2" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="GroundUpNeuralNet" RUN_TARGET_NAME="sblat2">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="sblat3" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="GroundUpNeuralNet" TARGET_NAME="sblat3" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="GroundUpNeuralNet" RUN_TARGET_NAME="sblat3">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="schur_complex" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="GroundUpNeuralNet" TARGET_NAME="schur_complex" CONFIG_NAME="Debug">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -8931,6 +8993,21 @@
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
+    <configuration name="zblat1" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="GroundUpNeuralNet" TARGET_NAME="zblat1" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="GroundUpNeuralNet" RUN_TARGET_NAME="zblat1">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="zblat2" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="GroundUpNeuralNet" TARGET_NAME="zblat2" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="GroundUpNeuralNet" RUN_TARGET_NAME="zblat2">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="zblat3" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="GroundUpNeuralNet" TARGET_NAME="zblat3" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="GroundUpNeuralNet" RUN_TARGET_NAME="zblat3">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="zerosized" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="GroundUpNeuralNet" TARGET_NAME="zerosized" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="GroundUpNeuralNet" RUN_TARGET_NAME="zerosized">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -8981,6 +9058,18 @@
       <item itemvalue="CMake Application.blas" />
       <item itemvalue="CMake Application.eigen_blas" />
       <item itemvalue="CMake Application.eigen_blas_static" />
+      <item itemvalue="CMake Application.cblat1" />
+      <item itemvalue="CMake Application.cblat2" />
+      <item itemvalue="CMake Application.cblat3" />
+      <item itemvalue="CMake Application.dblat1" />
+      <item itemvalue="CMake Application.dblat2" />
+      <item itemvalue="CMake Application.dblat3" />
+      <item itemvalue="CMake Application.sblat1" />
+      <item itemvalue="CMake Application.sblat2" />
+      <item itemvalue="CMake Application.sblat3" />
+      <item itemvalue="CMake Application.zblat1" />
+      <item itemvalue="CMake Application.zblat2" />
+      <item itemvalue="CMake Application.zblat3" />
       <item itemvalue="CMake Application.demos" />
       <item itemvalue="CMake Application.all_examples" />
       <item itemvalue="CMake Application.doc" />
@@ -10455,6 +10544,7 @@
       <workItem from="1682700710233" duration="13815000" />
       <workItem from="1682720414640" duration="1000" />
       <workItem from="1682722272527" duration="10465000" />
+      <workItem from="1682746507448" duration="2264000" />
     </task>
     <servers />
   </component>

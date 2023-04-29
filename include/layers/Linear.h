@@ -1,5 +1,5 @@
-#ifndef LINEAR_H
-#define LINEAR_H
+#ifndef GROUNDUPNEURALNET_LINEAR_H
+#define GROUNDUPNEURALNET_LINEAR_H
 
 #include "BaseModule.h"
 
@@ -9,6 +9,8 @@ class BaseModule;
 class Linear : public BaseModule
 {
 public:
+
+
     /**
      * @brief Main constructor of an individual fully-connected layer class
      * @param numInputs - The number of incoming neuron activations from the previous layer

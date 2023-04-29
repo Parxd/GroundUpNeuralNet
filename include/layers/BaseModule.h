@@ -1,6 +1,7 @@
-#ifndef BASEMODULE_H
-#define BASEMODULE_H
+#ifndef GROUNDUPNEURALNET_BASEMODULE_H
+#define GROUNDUPNEURALNET_BASEMODULE_H
 
+#include <memory>
 #include <Eigen/Dense>
 
 class BaseModule

@@ -1,5 +1,5 @@
-#ifndef RELU_H
-#define RELU_H
+#ifndef GROUNDUPNEURALNET_RELU_H
+#define GROUNDUPNEURALNET_RELU_H
 
 #include "BaseModule.h"
 

@@ -1496,12 +1496,9 @@
     <list default="true" id="68fd4622-5b44-4783-96ef-8e7e24320242" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/include/containers/Container.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/containers/Container.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/layers/BaseModule.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/layers/BaseModule.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/include/layers/Linear.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/layers/Linear.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/layers/RELU.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/layers/RELU.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/containers/Container.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Container.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/layers/Linear.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/layers/Linear.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layers/RELU.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/layers/RELU.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/unit/ContainerTest.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/tests/unit/ContainerTest.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

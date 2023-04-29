@@ -9,8 +9,6 @@ class BaseModule;
 class Linear : public BaseModule
 {
 public:
-    static std::unique_ptr<Linear> make(int numInputs, int numOutputs);
-
     /**
      * @brief Main constructor of an individual fully-connected layer class
      * @param numInputs - The number of incoming neuron activations from the previous layer

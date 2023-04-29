@@ -1,5 +1,9 @@
 #include "../../include/containers/Container.h"
 
+Container::Container(std::vector<std::unique_ptr<BaseModule>>& layers) {
+    mLayers.swap(layers);
+}
+
 void Container::view() {
     int c = 0;
     for (auto &i : mLayers) {

@@ -1,10 +1,6 @@
 #include "../../include/layers/Linear.h"
 #include <iostream>
 
-std::unique_ptr<Linear> Linear::make(int numInputs, int numOutputs) {
-    return std::make_unique<Linear>(numInputs, numOutputs);
-}
-
 Linear::Linear(int numInputs, int numOutputs):
     inputFeatures(numInputs), outputFeatures(numOutputs)
 {

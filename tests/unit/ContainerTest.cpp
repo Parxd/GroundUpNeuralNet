@@ -7,8 +7,15 @@ namespace {
 
     TEST(ContainerTest, construction) {
         Container cont(
-                Linear::make(3, 5)
+                new Linear(3, 5),
+                new RELU,
+                new Linear(5, 6)
                 );
         cont.view();
+
+        std::vector<std::unique_ptr<BaseModule>> vect;
+        vect.push_back(std::make_unique<Linear>(784, 23));
+        Container cont2(vect);
+        cont2.view();
     }
 }

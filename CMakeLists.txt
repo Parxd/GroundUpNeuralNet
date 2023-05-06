@@ -14,6 +14,8 @@ target_sources(GNN_test PRIVATE
         # Source files
         ./src/layers/Linear.cpp
         ./src/layers/RELU.cpp
+        ./src/losses/CE.cpp
+        ./src/losses/MSE.cpp
 
         ./src/containers/Container.cpp
 
@@ -25,6 +27,8 @@ target_sources(GNN_train PRIVATE
         # Source files
         ./src/layers/Linear.cpp
         ./src/layers/RELU.cpp
+        ./src/losses/CE.cpp
+        ./src/losses/MSE.cpp
 
         ./src/containers/Container.cpp
         )

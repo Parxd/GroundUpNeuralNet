@@ -8,21 +8,23 @@ Linear::Linear(int numInputs, int numOutputs):
     bias = Eigen::VectorXf::Random(outputFeatures, 1);
 }
 
-void Linear::forward(const Eigen::MatrixXf& input, Eigen::MatrixXf& output)
+void Linear::forward(const Eigen::MatrixXf& input, Eigen::MatrixXf& nextActivation)
 {
-    storedInput = input;
-    output = weights * input;
-    for (long i = 0; i < output.rows(); ++i) {
-        output.row(i).array() += bias.array();
+    curActivation = input;
+    nextActivation = weights * input;
+    for (long i = 0; i < nextActivation.rows(); ++i)
+    {
+        nextActivation.row(i).array() += bias.array();
     }
 }
 
-void Linear::backward(const Eigen::MatrixXf& dEW, Eigen::MatrixXf& output)
+void Linear::backward(const Eigen::MatrixXf& dLA, Eigen::MatrixXf& output)
 {
-    weights = weights.array() - (eta * (storedInput.transpose() * dEW).array());
-    bias = bias.array() - (eta * dEW.colwise().mean().array());
-    // TODO: Fix this next line
-    output = dEW * weights;
+    // Gradient descent - weight/bias updating
+    auto gradient = curActivation.transpose() * dLA;
+    weights = weights.array() - eta * gradient.array();
+    bias = bias.array() - (eta * dLA.colwise().mean()).array();
+    output = dLA * weights;
 }
 
 std::string Linear::getName() const

@@ -8,7 +8,8 @@ void RELU::forward(const Eigen::MatrixXf& input, Eigen::MatrixXf& output)
 
 void RELU::backward(const Eigen::MatrixXf& input, Eigen::MatrixXf& output)
 {
-    output = input.array().unaryExpr([] (float x) -> float {return float(bool(x > 0) * 1); });
+    output = storedInput.array().unaryExpr([] (float x) -> float {return float(bool(x > 0) * 1); });\
+    storedInput = storedInput.array() * input.array();
 }
 
 std::string RELU::getName() const

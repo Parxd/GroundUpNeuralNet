@@ -20,19 +20,25 @@ public:
     
     /**
      * @brief Feedforward method of a linear layer class
-     * @param input - The input matrix that is fed into this layer from the previous layer 
-     * @param output - The output matrix after operations w/ weights & biases
+     * @param input - The input matrix that is fed into this layer from the previous layer (previous
+     * layer's activation matrix after a pass through an activation function layer)
+     * @param curActivation - This layer's activation matrix after operations w/ weights & biases (next layer's activation matrix)
      * @return [NONE] Modifies output matrix in-place
     */
-    void forward(const Eigen::MatrixXf& input, Eigen::MatrixXf& output) override;
+    void forward(const Eigen::MatrixXf& input, Eigen::MatrixXf& nextActivation) override;
     
     /**
      * @brief Backpropagation method of a linear layer class
-     * @param dEW - Derivative of error with respect to weight
-     * @param output - The output matrix after operation with updated weights
+     * NOTE: The individual layer classes implementation of backward propagation are quite
+     *       confusing on their own. Look at Container.cpp to see how they are all
+     *       used together.
+     * @param ∂LA - The input matrix with the derivative of loss w/ respect to NEXT layer
+     *              output activations
+     * @param output - The input matrix matrix multiplied with this layer's weights to backpropagate
+     *                 error to the previous layer
      * @return [NONE] Modifies output matrix (& weights/biases) in-place
     */
-    void backward(const Eigen::MatrixXf& dEW, Eigen::MatrixXf& output) override;
+    void backward(const Eigen::MatrixXf& dLA, Eigen::MatrixXf& output) override;
 
     /**
      * @brief Getter for name (linear)
@@ -89,7 +95,7 @@ public:
     [[nodiscard]] const Eigen::VectorXf& getBias() const;
 
 private:
-    Eigen::VectorXf storedInput;
+    Eigen::VectorXf curActivation;
     Eigen::MatrixXf weights;
     Eigen::VectorXf bias;
     

@@ -11,12 +11,12 @@ class RELU : public BaseModule
 public:
     RELU() = default;
 
-    ~RELU() = default;
+    ~RELU() override = default;
 
     /**
-     * @brief
-     * @param
-     * @param
+     * @brief Feedforward previous layer through ReLU activation function
+     * @param input - The input matrix that is fed into this layer from the previous layer
+     * @param output - Resulting matrix after ReLU function applied
     */
     void forward(const Eigen::MatrixXf& input, Eigen::MatrixXf& output) override;
 

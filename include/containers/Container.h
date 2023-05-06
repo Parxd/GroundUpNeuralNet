@@ -16,7 +16,7 @@ public:
 
     /*
      * @brief PREFERRED variadic constructor - accepts std::unique_ptr from BaseModule layer factories
-     * @param layer - Variable number of RAW BaseModule pointers
+     * @param layer - Variable number of std::unique_ptr of BaseModule type
      * @return Container object with layers added to internal vector
      */
     template<typename... T>

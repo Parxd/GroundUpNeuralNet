@@ -22,11 +22,11 @@ public:
      * @brief Feedforward method of a linear layer class
      * @param input - The input matrix that is fed into this layer from the previous layer (previous
      * layer's activation matrix after a pass through an activation function layer)
-     * @param curActivation - This layer's activation matrix after operations w/ weights & biases (next layer's activation matrix)
-     * @return [NONE] Modifies output matrix in-place
+     * @param nextActivation - This layer's activation matrix after operations w/ weights & biases (next layer's activation matrix)
+     * @return [NONE] Modifies output matrix (nextActivation) in-place
     */
     void forward(const Eigen::MatrixXf& input, Eigen::MatrixXf& nextActivation) override;
-    
+
     /**
      * @brief Backpropagation method of a linear layer class
      * NOTE: The individual layer classes implementation of backward propagation are quite
@@ -71,31 +71,31 @@ public:
     void setLearningRate(const float& learningRate);
     
     /**
-     * @brief Update weights matrix (primarily for testing)
+     * @brief Update weights matrix (TESTING PURPOSES)
      * @param newWeights - Matrix for weights to be updated to
     */
     void setWeight(Eigen::MatrixXf& newWeights);
     
     /**
-     * @brief Update bias matrix (primarily for testing)
+     * @brief Update bias matrix (TESTING PURPOSES)
      * @param newBias - Matrix for biases to be updated to
     */
     void setBias(Eigen::MatrixXf& newBias);
     
     /**
-     * @brief Retrieve weights matrix
+     * @brief Retrieve weights matrix (TESTING PURPOSES)
      * @return Const. reference to internal weights matrix
     */
     [[nodiscard]] const Eigen::MatrixXf& getWeight() const;
     
     /**
-     * @brief Retrieve bias matrix
-     * @return Const. reference to internal bias matrix.
+     * @brief Retrieve bias matrix (TESTING PURPOSES)
+     * @return Const. reference to internal bias matrix
     */
     [[nodiscard]] const Eigen::VectorXf& getBias() const;
 
 private:
-    Eigen::VectorXf curActivation;
+    Eigen::MatrixXf curActivation;
     Eigen::MatrixXf weights;
     Eigen::VectorXf bias;
     

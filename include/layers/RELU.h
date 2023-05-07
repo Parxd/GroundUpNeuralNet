@@ -30,7 +30,7 @@ public:
     [[nodiscard]] std::string getName() const override;
 
 private:
-    Eigen::MatrixXf storedInput;
+    Eigen::MatrixXf curActivation;
 };
 
 #endif

@@ -12,19 +12,23 @@ void Linear::forward(const Eigen::MatrixXf& input, Eigen::MatrixXf& nextActivati
 {
     curActivation = input;
     nextActivation = weights * input;
-    for (long i = 0; i < nextActivation.rows(); ++i)
+    for (long i = 0; i < nextActivation.cols(); ++i)
     {
-        nextActivation.row(i).array() += bias.array();
+        nextActivation.col(i) += bias;
     }
 }
 
 void Linear::backward(const Eigen::MatrixXf& dLA, Eigen::MatrixXf& output)
 {
-    // Gradient descent - weight/bias updating
-    auto gradient = curActivation.transpose() * dLA;
+    // One-time in-place transpose of curActivation for matrix multiplication
+    if (curActivation.cols() != 2) {
+        curActivation.transposeInPlace();
+    }
+    // Gradient descent - updating weights/biases
+    auto gradient = dLA * curActivation;
     weights = weights.array() - eta * gradient.array();
-    bias = bias.array() - (eta * dLA.colwise().mean()).array();
-    output = dLA * weights;
+    bias = bias.array() - (eta * dLA.rowwise().mean()).array();
+    output = dLA.transpose() * weights;
 }
 
 std::string Linear::getName() const

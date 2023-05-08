@@ -21,5 +21,5 @@ std::string Sigmoid::getName() const {
 }
 
 float Sigmoid::sigmoidFunction(float x) {
-    return float(1) / 1 + float(exp(-double(x)));
+    return float(1) / (1 + float(exp(-double(x))));
 }

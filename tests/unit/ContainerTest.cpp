@@ -10,7 +10,5 @@ namespace {
                 BaseModule::make<Linear>(3, 5),
                 BaseModule::make<RELU>()
                 );
-        cont.view();
-
     }
 }

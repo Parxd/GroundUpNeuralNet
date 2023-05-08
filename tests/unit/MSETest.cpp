@@ -17,8 +17,6 @@ namespace {
             {8, 2, 1}
         };
         float error = MSE::forward(modelOutput, target);
-        std::cout << "MSE: " << error << "\n" << std::endl;
         auto errorDerivative = MSE::backward(modelOutput, target);
-        std::cout << errorDerivative;
     }
 }

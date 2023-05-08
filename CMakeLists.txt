@@ -22,6 +22,7 @@ target_sources(GNN_test PRIVATE
         # Test files
         ./tests/unit/LinearTest.cpp
         ./tests/unit/ContainerTest.cpp
+        ./tests/unit/MSETest.cpp
         )
 target_sources(GNN_train PRIVATE
         # Source files

@@ -21,7 +21,7 @@ void Linear::forward(const Eigen::MatrixXf& input, Eigen::MatrixXf& nextActivati
 void Linear::backward(const Eigen::MatrixXf& dLA, Eigen::MatrixXf& output)
 {
     // One-time in-place transpose of curActivation for matrix multiplication
-    if (curActivation.cols() != 2) {
+    if (curActivation.cols() != inputFeatures) {
         curActivation.transposeInPlace();
     }
     // Gradient descent - updating weights/biases

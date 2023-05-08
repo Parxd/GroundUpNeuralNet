@@ -1506,13 +1506,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="68fd4622-5b44-4783-96ef-8e7e24320242" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/include/losses/MSE.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/unit/MSETest.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/layers/Linear.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/layers/Linear.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/layers/RELU.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/layers/RELU.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/layers/BaseModule.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/layers/BaseModule.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/losses/CE.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/include/losses/CE.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/losses/MSE.hpp" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/layers/Linear.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/layers/Linear.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/layers/RELU.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/layers/RELU.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/unit/ContainerTest.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/tests/unit/ContainerTest.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/unit/LinearTest.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/tests/unit/LinearTest.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/losses/MSE.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/losses/MSE.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -1546,27 +1549,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.cidr.known.project.marker": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "cf.first.check.clang-format": "false",
-    "cidr.known.project.marker": "true",
-    "ctest.advertisement.all.test.configuration.is.created": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "/home/parxed/code/projects/DeepLearningFrameworkFromScratchCpp",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;ctest.advertisement.all.test.configuration.is.created&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/parxed/code/projects/DeepLearningFrameworkFromScratchCpp&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/include/layers" />
+      <recent name="$PROJECT_DIR$/include" />
       <recent name="C:\Users\14253\Desktop\GroundUpNeuralNet\tests\unit" />
       <recent name="C:\Users\14253\Desktop\GroundUpNeuralNet\include\layers" />
       <recent name="C:\Users\14253\Desktop\GroundUpNeuralNet\src\layers" />
@@ -1578,6 +1583,11 @@
     </option>
   </component>
   <component name="RunManager" selected="Google Test.GNN_test">
+    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="GNN_test" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="GroundUpNeuralNet" TARGET_NAME="GNN_test" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="GroundUpNeuralNet" RUN_TARGET_NAME="GNN_test" TEST_MODE="SUITE_TEST">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -10553,6 +10563,8 @@
       <workItem from="1683413582518" duration="5794000" />
       <workItem from="1683420712003" duration="2553000" />
       <workItem from="1683425050612" duration="8640000" />
+      <workItem from="1683487688646" duration="9607000" />
+      <workItem from="1683527626523" duration="290000" />
     </task>
     <servers />
   </component>

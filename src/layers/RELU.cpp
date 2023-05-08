@@ -8,7 +8,8 @@ void RELU::forward(const Eigen::MatrixXf& input, Eigen::MatrixXf& output)
 
 void RELU::backward(const Eigen::MatrixXf& input, Eigen::MatrixXf& output)
 {
-    output = curActivation.array().unaryExpr([] (float x) -> float {return float(bool(x > 0) * 1); });\
+    output = curActivation.array().unaryExpr([] (float x) -> float {return float(bool(x > 0) * 1); });
+    // TODO: Fix this next line
     curActivation = curActivation.array() * input.array();
 }
 

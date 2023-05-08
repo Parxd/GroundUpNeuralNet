@@ -2,7 +2,7 @@
 #define GROUNDUPNEURALNET_BASEMODULE_H
 
 #include <memory>
-#include <Eigen/Dense>
+#include "Eigen/Dense"
 
 class BaseModule
 {

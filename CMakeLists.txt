@@ -14,6 +14,7 @@ target_sources(GNN_test PRIVATE
         # Source files
         ./src/layers/Linear.cpp
         ./src/layers/RELU.cpp
+        ./src/layers/Sigmoid.cpp
         ./src/losses/CE.cpp
         ./src/losses/MSE.cpp
 
@@ -23,11 +24,13 @@ target_sources(GNN_test PRIVATE
         ./tests/unit/LinearTest.cpp
         ./tests/unit/ContainerTest.cpp
         ./tests/unit/MSETest.cpp
+        ./tests/unit/SigmoidTest.cpp
         )
 target_sources(GNN_train PRIVATE
         # Source files
         ./src/layers/Linear.cpp
         ./src/layers/RELU.cpp
+        ./src/layers/Sigmoid.cpp
         ./src/losses/CE.cpp
         ./src/losses/MSE.cpp
 

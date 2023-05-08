@@ -6,6 +6,19 @@ namespace {
     };
 
     TEST(MSETest, basics) {
-        MSE::forward()
+        Eigen::MatrixXf modelOutput{
+            {2, 4, 1},
+            {5, 3, 6},
+            {8, 2, 7}
+        };
+        Eigen::MatrixXf target{
+            {3, 5, 2},
+            {6, 6, 6},
+            {8, 2, 1}
+        };
+        float error = MSE::forward(modelOutput, target);
+        std::cout << "MSE: " << error << "\n" << std::endl;
+        auto errorDerivative = MSE::backward(modelOutput, target);
+        std::cout << errorDerivative;
     }
 }

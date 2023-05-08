@@ -1506,16 +1506,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="68fd4622-5b44-4783-96ef-8e7e24320242" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/include/losses/MSE.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/unit/MSETest.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/unit/SigmoidTest.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/layers/BaseModule.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/layers/BaseModule.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/losses/CE.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/include/losses/CE.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/losses/MSE.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layers/Linear.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/layers/Linear.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/layers/RELU.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/layers/RELU.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/layers/Sigmoid.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/layers/Sigmoid.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/layers/RELU.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/layers/RELU.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layers/Sigmoid.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/layers/Sigmoid.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/losses/MSE.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/losses/MSE.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/unit/MSETest.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/tests/unit/MSETest.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -1583,11 +1582,6 @@
     </option>
   </component>
   <component name="RunManager" selected="Google Test.GNN_test">
-    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="GNN_test" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="GroundUpNeuralNet" TARGET_NAME="GNN_test" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="GroundUpNeuralNet" RUN_TARGET_NAME="GNN_test" TEST_MODE="SUITE_TEST">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -2040,6 +2034,11 @@
       </method>
     </configuration>
     <configuration name="Tutorial_simple_example_fixed_size" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="GroundUpNeuralNet" TARGET_NAME="Tutorial_simple_example_fixed_size" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="GroundUpNeuralNet" RUN_TARGET_NAME="Tutorial_simple_example_fixed_size">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -10565,6 +10564,7 @@
       <workItem from="1683425050612" duration="8640000" />
       <workItem from="1683487688646" duration="9607000" />
       <workItem from="1683527626523" duration="290000" />
+      <workItem from="1683532005339" duration="5391000" />
     </task>
     <servers />
   </component>

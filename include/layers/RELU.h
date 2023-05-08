@@ -29,7 +29,7 @@ public:
 
     [[nodiscard]] std::string getName() const override;
 
-private:
+private:    
     Eigen::MatrixXf curActivation;
 };
 

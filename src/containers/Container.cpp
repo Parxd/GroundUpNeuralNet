@@ -2,7 +2,7 @@
 #include "../../include/losses/MSE.h"
 
 void Container::view() {
-    int c = 0;
+    int c;
     for (auto &i : mLayers) {
         std::cout << c << ". " << i->getName() << " layer";
         // RTTI check just for the Linear class (special description)
@@ -27,7 +27,9 @@ Eigen::MatrixXf Container::forward(const Eigen::MatrixXf& input) {
 void Container::backward(const Eigen::MatrixXf& pred, const Eigen::MatrixXf& target) {
     MSE::forward(pred, target);
     auto errorDerivative = MSE::backward(pred, target);
-    for (auto it = mLayers.rbegin(); it != mLayers.rend(); ++it) {
-        (*it)->backward(errorDerivative);
+
+    auto output = mLayers.back()->backward(errorDerivative);
+    for (auto it = mLayers.rbegin() + 1; it != mLayers.rend(); ++it) {
+        output = (*it)->backward(output);
     }
 }

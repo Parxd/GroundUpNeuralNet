@@ -29,7 +29,9 @@ Eigen::MatrixXf Linear::backward(const Eigen::MatrixXf& dLA)
     auto gradient = dLA * curActivation;
     weights = weights.array() - eta * gradient.array();
     bias = bias.array() - (eta * dLA.rowwise().mean()).array();
-    return dLA.transpose() * weights;
+    Eigen::MatrixXf output = dLA.transpose() * weights;
+    output.transposeInPlace();
+    return output;
 }
 
 std::string Linear::getName() const

@@ -10,22 +10,26 @@ namespace {
 
     TEST(ContainerTest, construction) {
         Container cont(
-                BaseModule::make<Linear>(2, 5),
-                BaseModule::make<Sigmoid>(),
-                BaseModule::make<Linear>(5, 3),
-                BaseModule::make<RELU>()
-                );
+                BaseModule::make<Linear>(2, 10),
+                BaseModule::make<RELU>(),
+                BaseModule::make<Linear>(10, 10),
+                BaseModule::make<RELU>(),
+                BaseModule::make<Linear>(10, 2),
+                BaseModule::make<Softmax>()
+        );
         Eigen::MatrixXf data{
-                {1, 2, 3, 8},
-                {4, 5, 6, 7}
+                {1, 2, 3, 8, 7, 7, 7},
+                {4, 5, 6, 7, 7, 7, 7}
         };
         auto modelOutput = cont.forward(data);
 
         Eigen::MatrixXf target{
-                {2, 3, 4, 5},
-                {1, 1, 1, 2},
-                {1, 2, 2, 3}
+                {2, 3, 4, 5, 5, 4, 3},
+                {1, 2, 1, 2, 4, 3, 2}
         };
-        cont.backward(modelOutput, target);
+        for (int i = 0; i < 500; ++i) {
+            cont.backward(modelOutput, target);
+        }
+        std::cout << cont.forward(data);
     }
 }

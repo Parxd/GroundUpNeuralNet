@@ -1,3 +1,4 @@
+#include <iostream>
 #include "../../include/layers/Sigmoid.h"
 
 Eigen::MatrixXf Sigmoid::forward(const Eigen::MatrixXf &input) {
@@ -9,10 +10,9 @@ Eigen::MatrixXf Sigmoid::forward(const Eigen::MatrixXf &input) {
     return output;
 }
 
-Eigen::MatrixXf Sigmoid::backward(const Eigen::MatrixXf &dLA) {
+Eigen::MatrixXf Sigmoid::backward(const Eigen::MatrixXf &input) {
     Eigen::MatrixXf output = curActivation.array() * (1 - curActivation.array());
-    output = output.array() * dLA.array();
-    return output;
+    return output.array() *= input.array();
 }
 
 std::string Sigmoid::getName() const {

@@ -23,6 +23,7 @@ target_sources(GNN_test PRIVATE
         # Test files
         ./tests/unit/LinearTest.cpp
         ./tests/unit/ContainerTest.cpp
+        ./tests/unit/RELUTest.cpp
         ./tests/unit/SigmoidTest.cpp
         ./tests/unit/SoftmaxTest.cpp
         ./tests/unit/MSETest.cpp

@@ -9,6 +9,5 @@ float MSE::forward(const Eigen::MatrixXf &pred, const Eigen::MatrixXf &target)
 
 Eigen::MatrixXf MSE::backward(const Eigen::MatrixXf &pred, const Eigen::MatrixXf &target)
 {
-    Eigen::MatrixXf dLA = 2 * (pred - target) / target.cols();
-    return std::move(dLA);
+    return 2 * (pred - target) / target.cols();
 }

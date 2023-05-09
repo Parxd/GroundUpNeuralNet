@@ -18,14 +18,14 @@ public:
      * @param input - The input matrix that is fed into this layer from the previous layer
      * @param output - Resulting matrix after ReLU function applied
     */
-    void forward(const Eigen::MatrixXf& input, Eigen::MatrixXf& output) override;
+    Eigen::MatrixXf forward(const Eigen::MatrixXf& input) override;
 
     /**
      * @brief
      * @param
      * @param
     */
-    void backward(const Eigen::MatrixXf& input, Eigen::MatrixXf& output) override;
+    Eigen::MatrixXf backward(const Eigen::MatrixXf& input) override;
 
     [[nodiscard]] std::string getName() const override;
 

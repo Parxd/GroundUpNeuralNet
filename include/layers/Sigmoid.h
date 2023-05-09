@@ -6,21 +6,19 @@
 
 class BaseModule;
 
-class Sigmoid {
+class Sigmoid : public BaseModule {
 public:
     Sigmoid() = default;
 
-    ~Sigmoid() = default;
+    ~Sigmoid() override = default;
 
-    Eigen::MatrixXf forward(const Eigen::MatrixXf &input);
+    Eigen::MatrixXf forward(const Eigen::MatrixXf &input) override;
 
-    Eigen::MatrixXf backward(const Eigen::MatrixXf &dLA);
+    Eigen::MatrixXf backward(const Eigen::MatrixXf &dLA) override;
 
-    [[nodiscard]] std::string getName() const;
+    [[nodiscard]] std::string getName() const override;
 
 private:
-    static float sigmoidFunction(float x);
-
     Eigen::MatrixXf curActivation;
 };
 

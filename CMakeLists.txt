@@ -15,25 +15,27 @@ target_sources(GNN_test PRIVATE
         ./src/layers/Linear.cpp
         ./src/layers/RELU.cpp
         ./src/layers/Sigmoid.cpp
+        ./src/layers/Softmax.cpp
         ./src/losses/CE.cpp
         ./src/losses/MSE.cpp
-
         ./src/containers/Container.cpp
 
         # Test files
         ./tests/unit/LinearTest.cpp
         ./tests/unit/ContainerTest.cpp
-        ./tests/unit/MSETest.cpp
         ./tests/unit/SigmoidTest.cpp
+        ./tests/unit/SoftmaxTest.cpp
+        ./tests/unit/MSETest.cpp
+        ./tests/unit/CETest.cpp
         )
 target_sources(GNN_train PRIVATE
         # Source files
         ./src/layers/Linear.cpp
         ./src/layers/RELU.cpp
         ./src/layers/Sigmoid.cpp
+        ./src/layers/Softmax.cpp
         ./src/losses/CE.cpp
         ./src/losses/MSE.cpp
-
         ./src/containers/Container.cpp
         )
 

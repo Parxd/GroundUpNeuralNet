@@ -43,6 +43,10 @@ public:
      */
     void view();
 
+    void forward();
+
+    void backward();
+
 private:
     std::vector<std::unique_ptr<BaseModule>> mLayers;
 };

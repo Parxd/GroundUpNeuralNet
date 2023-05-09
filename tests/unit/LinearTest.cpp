@@ -62,7 +62,6 @@ namespace {
                 {1, 2, 3, 4, 5, 6, 7, 8, 9},
                 {1, 2, 3, 4, 5, 6, 7, 8, 9}
         };
-        Eigen::Matrix oldInputs(inputs);
         Eigen::MatrixXf newInputs{
                 {4,  7,  10, 13, 16, 19, 22,  25,  28},
                 {7,  13, 19, 25, 31, 37, 43,  49,  55},
@@ -70,11 +69,8 @@ namespace {
                 {15, 29, 43, 57, 71, 85, 99,  113, 127},
                 {16, 31, 46, 61, 76, 91, 106, 121, 136}
         };
-        layer.forward(inputs, inputs);
-        // Check that inputs was modified in-place and is now different
-        EXPECT_NE(oldInputs.rows(), inputs.rows());
         // Check for correct operations on input
-        EXPECT_EQ(inputs, newInputs);
+        EXPECT_EQ(layer.forward(inputs), newInputs);
     }
 
     TEST(LinearTest, backward1) {
@@ -98,9 +94,9 @@ namespace {
                 {5, 6, 7, 8},
                 {8, 9, 1, 2}
         };
-        layer.forward(input, input);
+        layer.forward(input);
+        auto result = layer.backward(lossToNextActivationDerivative);
 
-        layer.backward(lossToNextActivationDerivative, input);
     }
 
     TEST(LinearTest, backward2)
@@ -125,21 +121,16 @@ namespace {
                 {-2.f, 7.f},
         };
         forwardInput.transposeInPlace();
-        Eigen::MatrixXf out;
-        layer.forward(forwardInput, out);
+        layer.forward(forwardInput);
 
-        Eigen::MatrixXf input{
-                {1, 2, 3},
-                {1, 2, 3},
-        };
         Eigen::MatrixXf lossToNextActivationDerivative{
                 {2, 3, 4, 5},
                 {5, 6, 7, 8},
                 {8, 9, 1, 2}
         };
         lossToNextActivationDerivative.transposeInPlace();
-        layer.forward(input, input);
         // Backpropagate the simulated loss derivative calculated
-        layer.backward(lossToNextActivationDerivative, input);
+        auto result = layer.backward(lossToNextActivationDerivative);
+
     }
 }

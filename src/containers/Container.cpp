@@ -18,3 +18,11 @@ void Container::view() {
         std::flush(std::cout);
     }
 }
+
+void Container::forward() {
+
+}
+
+void Container::backward() {
+
+}

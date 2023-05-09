@@ -1,25 +1,20 @@
 #include "../../include/layers/Sigmoid.h"
 
 Eigen::MatrixXf Sigmoid::forward(const Eigen::MatrixXf &input) {
-    curActivation = input;
     Eigen::MatrixXf output = input.array().unaryExpr(
-            [] (float x) -> float {return sigmoidFunction(x);}
+            [] (float x) -> float {return float(1) / (1 + float(exp(-double(x))));}
             );
-    return std::move(output);
+    // Cache computed sigmoid input, rather than raw input (for use during backpropagation)
+    curActivation = output;
+    return output;
 }
 
 Eigen::MatrixXf Sigmoid::backward(const Eigen::MatrixXf &dLA) {
-    Eigen::MatrixXf output = curActivation.array().unaryExpr(
-            [] (float x) -> float {return sigmoidFunction(x) * (1 - sigmoidFunction(x));}
-            );
+    Eigen::MatrixXf output = curActivation.array() * (1 - curActivation.array());
     output = output.array() * dLA.array();
-    return std::move(output);
+    return output;
 }
 
 std::string Sigmoid::getName() const {
     return "Sigmoid";
-}
-
-float Sigmoid::sigmoidFunction(float x) {
-    return float(1) / (1 + float(exp(-double(x))));
 }

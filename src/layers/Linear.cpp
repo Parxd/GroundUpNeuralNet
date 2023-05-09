@@ -8,17 +8,18 @@ Linear::Linear(int numInputs, int numOutputs):
     bias = Eigen::VectorXf::Random(outputFeatures, 1);
 }
 
-void Linear::forward(const Eigen::MatrixXf& input, Eigen::MatrixXf& nextActivation)
+Eigen::MatrixXf Linear::forward(const Eigen::MatrixXf& input)
 {
     curActivation = input;
-    nextActivation = weights * input;
+    Eigen::MatrixXf nextActivation = weights * input;
     for (long i = 0; i < nextActivation.cols(); ++i)
     {
         nextActivation.col(i) += bias;
     }
+    return nextActivation;
 }
 
-void Linear::backward(const Eigen::MatrixXf& dLA, Eigen::MatrixXf& output)
+Eigen::MatrixXf Linear::backward(const Eigen::MatrixXf& dLA)
 {
     // One-time in-place transpose of curActivation for matrix multiplication
     if (curActivation.cols() != inputFeatures) {
@@ -28,7 +29,7 @@ void Linear::backward(const Eigen::MatrixXf& dLA, Eigen::MatrixXf& output)
     auto gradient = dLA * curActivation;
     weights = weights.array() - eta * gradient.array();
     bias = bias.array() - (eta * dLA.rowwise().mean()).array();
-    output = dLA.transpose() * weights;
+    return dLA.transpose() * weights;
 }
 
 std::string Linear::getName() const

@@ -1,4 +1,6 @@
-#ifndef GNN_CE_HPP
-#define GNN_CE_HPP
+#ifndef GROUNDUPNEURALNET_CE_H
+#define GROUNDUPNEURALNET_CE_H
 
-#endif //GNN_CE_HPP
+
+
+#endif // GROUNDUPNEURALNET_CE_H

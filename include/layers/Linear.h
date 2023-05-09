@@ -25,7 +25,7 @@ public:
      * @param nextActivation - This layer's activation matrix after operations w/ weights & biases (next layer's activation matrix)
      * @return [NONE] Modifies output matrix (nextActivation) in-place
     */
-    void forward(const Eigen::MatrixXf& input, Eigen::MatrixXf& nextActivation) override;
+    Eigen::MatrixXf forward(const Eigen::MatrixXf& input) override;
 
     /**
      * @brief Backpropagation method of a linear layer class
@@ -38,7 +38,7 @@ public:
      *                 error to the previous layer
      * @return [NONE] Modifies output matrix (& weights/biases) in-place
     */
-    void backward(const Eigen::MatrixXf& dLA, Eigen::MatrixXf& output) override;
+    Eigen::MatrixXf backward(const Eigen::MatrixXf& dLA) override;
 
     /**
      * @brief Getter for name (linear)

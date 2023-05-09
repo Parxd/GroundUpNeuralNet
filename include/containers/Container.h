@@ -36,16 +36,14 @@ public:
         (mLayers.push_back(std::unique_ptr<BaseModule>(layer)), ...);
     }
 
-    explicit Container(std::vector<std::unique_ptr<BaseModule>>& layers);
-
     /*
      * @brief Prints order and description of each layer in internal vector
      */
     void view();
 
-    void forward();
+    Eigen::MatrixXf forward(const Eigen::MatrixXf& input);
 
-    void backward();
+    void backward(const Eigen::MatrixXf& pred, const Eigen::MatrixXf& target);
 
 private:
     std::vector<std::unique_ptr<BaseModule>> mLayers;

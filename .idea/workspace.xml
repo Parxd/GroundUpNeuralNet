@@ -1506,25 +1506,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="68fd4622-5b44-4783-96ef-8e7e24320242" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/tests/unit/CETest.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/unit/SoftmaxTest.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/include/containers/Container.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/containers/Container.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/layers/BaseModule.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/layers/BaseModule.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/layers/Linear.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/layers/Linear.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/layers/RELU.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/layers/RELU.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/layers/Sigmoid.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/layers/Sigmoid.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/layers/Softmax.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/layers/Softmax.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/include/losses/CE.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/losses/CE.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/containers/Container.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Container.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layers/Linear.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/layers/Linear.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layers/RELU.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/layers/RELU.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layers/Sigmoid.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/layers/Sigmoid.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layers/Softmax.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/layers/Softmax.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/losses/CE.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/losses/CE.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/losses/MSE.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/losses/MSE.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/unit/LinearTest.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/tests/unit/LinearTest.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/unit/ContainerTest.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/tests/unit/ContainerTest.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/unit/SoftmaxTest.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/tests/unit/SoftmaxTest.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -1544,6 +1531,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file:///usr/include/c++/11/bits/stl_vector.h" root0="SKIP_INSPECTION" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -1573,7 +1563,7 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.deploy.options&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -1592,11 +1582,6 @@
     </option>
   </component>
   <component name="RunManager" selected="Google Test.GNN_test">
-    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="GNN_test" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="GroundUpNeuralNet" TARGET_NAME="GNN_test" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="GroundUpNeuralNet" RUN_TARGET_NAME="GNN_test" TEST_MODE="SUITE_TEST">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -10575,7 +10560,9 @@
       <workItem from="1683487688646" duration="9607000" />
       <workItem from="1683527626523" duration="290000" />
       <workItem from="1683532005339" duration="5770000" />
-      <workItem from="1683577437187" duration="15345000" />
+      <workItem from="1683577437187" duration="21497000" />
+      <workItem from="1683649605857" duration="7452000" />
+      <workItem from="1683660091096" duration="1652000" />
     </task>
     <servers />
   </component>
@@ -10587,6 +10574,17 @@
     <isAutomaticCheckingOnLaunch value="false" />
     <isAutomaticFoundErrors value="true" />
     <isAutomaticFoundErrors value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/src/containers/Container.cpp</url>
+          <line>30</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

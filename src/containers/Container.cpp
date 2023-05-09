@@ -1,8 +1,5 @@
 #include "../../include/containers/Container.h"
-
-Container::Container(std::vector<std::unique_ptr<BaseModule>>& layers) {
-    mLayers.swap(layers);
-}
+#include "../../include/losses/MSE.h"
 
 void Container::view() {
     int c = 0;
@@ -19,10 +16,18 @@ void Container::view() {
     }
 }
 
-void Container::forward() {
-
+Eigen::MatrixXf Container::forward(const Eigen::MatrixXf& input) {
+    auto output = mLayers[0]->forward(input);
+    for (auto it = mLayers.begin() + 1; it != mLayers.end(); ++it) {
+        output = (*it)->forward(output);
+    }
+    return output;
 }
 
-void Container::backward() {
-
+void Container::backward(const Eigen::MatrixXf& pred, const Eigen::MatrixXf& target) {
+    MSE::forward(pred, target);
+    auto errorDerivative = MSE::backward(pred, target);
+    for (auto it = mLayers.rbegin(); it != mLayers.rend(); ++it) {
+        (*it)->backward(errorDerivative);
+    }
 }

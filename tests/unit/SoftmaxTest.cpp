@@ -11,7 +11,11 @@ namespace {
                 {5, 5},
                 {0, 0}
         };
-        Softmax lol;
-        lol.forward(input);
+        Softmax softmax;
+        softmax.forward(input);
+    }
+
+    TEST(SoftmaxTest, backward) {
+
     }
 }

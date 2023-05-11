@@ -1505,11 +1505,14 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="68fd4622-5b44-4783-96ef-8e7e24320242" name="Changes" comment="Add container support for different loss functions">
+    <list default="true" id="68fd4622-5b44-4783-96ef-8e7e24320242" name="Changes" comment="Separate concern of type of loss function desired from container data structure itself">
+      <change afterPath="$PROJECT_DIR$/include/layers/LeakyReLU.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/layers/LeakyReLU.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/include/containers/Container.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/containers/Container.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/Container.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Container.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/unit/ContainerTest.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/tests/unit/ContainerTest.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layers/ReLU.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/layers/ReLU.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -1581,6 +1584,11 @@
     </option>
   </component>
   <component name="RunManager" selected="Google Test.GNN_test">
+    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="GNN_test" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="GroundUpNeuralNet" TARGET_NAME="GNN_test" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="GroundUpNeuralNet" RUN_TARGET_NAME="GNN_test" TEST_MODE="SUITE_TEST">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -10565,7 +10573,7 @@
       <workItem from="1683694198363" duration="2969000" />
       <workItem from="1683748405454" duration="16027000" />
       <workItem from="1683772450674" duration="7518000" />
-      <workItem from="1683837397036" duration="5600000" />
+      <workItem from="1683837397036" duration="8168000" />
     </task>
     <task id="LOCAL-00001" summary="Add Container forward &amp; backward">
       <created>1683667142346</created>
@@ -10602,7 +10610,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683841930442</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Separate concern of type of loss function desired from container data structure itself">
+      <created>1683843113960</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1683843113960</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -10620,7 +10635,8 @@
     <MESSAGE value="Add CE loss support" />
     <MESSAGE value="Finish CE backward + add Tanh activation function" />
     <MESSAGE value="Add container support for different loss functions" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add container support for different loss functions" />
+    <MESSAGE value="Separate concern of type of loss function desired from container data structure itself" />
+    <option name="LAST_COMMIT_MESSAGE" value="Separate concern of type of loss function desired from container data structure itself" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

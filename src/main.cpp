@@ -2,6 +2,6 @@
 
 int main(int argc, char** argv)
 {
-    Container<MSE> cont;
+    Container cont;
     return 0;
 }

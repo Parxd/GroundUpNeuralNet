@@ -17,6 +17,7 @@ target_sources(GNN_test PRIVATE
         ./src/layers/Sigmoid.cpp
         ./src/layers/Softmax.cpp
         ./src/layers/Tanh.cpp
+        ./src/layers/LeakyReLU.cpp
         ./src/losses/CE.cpp
         ./src/losses/MSE.cpp
         ./src/containers/Container.cpp
@@ -39,6 +40,7 @@ target_sources(GNN_train PRIVATE
         ./src/layers/Sigmoid.cpp
         ./src/layers/Softmax.cpp
         ./src/layers/Tanh.cpp
+        ./src/layers/LeakyReLU.cpp
         ./src/losses/CE.cpp
         ./src/losses/MSE.cpp
         ./src/containers/Container.cpp

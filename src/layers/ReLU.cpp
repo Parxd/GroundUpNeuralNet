@@ -9,12 +9,12 @@ Eigen::MatrixXf ReLU::forward(const Eigen::MatrixXf& input)
     return curActivation;
 }
 
-Eigen::MatrixXf ReLU::backward(const Eigen::MatrixXf& input)
+Eigen::MatrixXf ReLU::backward(const Eigen::MatrixXf& dLA)
 {
     Eigen::MatrixXf output = curActivation.array().unaryExpr(
             [] (float x) -> float {return float(bool(x > 0) * 1);}
             );
-    return output.array() *= input.array();
+    return output.array() *= dLA.array();
 }
 
 std::string ReLU::getName() const

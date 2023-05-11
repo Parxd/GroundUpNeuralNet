@@ -21,8 +21,9 @@ public:
     /**
      * @brief Feedforward method of a linear layer class
      * @param input - The input matrix that is fed into this layer from the previous layer (previous
-     * layer's activation matrix after a pass through an activation function layer)
-     * @param nextActivation - This layer's activation matrix after operations w/ weights & biases (next layer's activation matrix)
+     *                layer's activation matrix after a pass through an activation function layer)
+     * @param nextActivation - This layer's activation matrix after operations w/ weights & biases (next layer's
+     *                         activation matrix)
      * @return [NONE] Modifies output matrix (nextActivation) in-place
     */
     Eigen::MatrixXf forward(const Eigen::MatrixXf& input) override;

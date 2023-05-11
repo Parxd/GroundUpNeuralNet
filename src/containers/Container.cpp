@@ -22,3 +22,11 @@ Eigen::MatrixXf Container::forward(const Eigen::MatrixXf& input) {
     }
     return output;
 }
+
+void Container::backward(const Eigen::MatrixXf &errorDerivative) {
+    auto output = mLayers.back()->backward(errorDerivative);
+    for (auto it = mLayers.rbegin() + 1; it != mLayers.rend(); ++it) {
+        output = (*it)->backward(output);
+    }
+}
+

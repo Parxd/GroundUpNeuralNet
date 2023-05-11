@@ -54,27 +54,11 @@ public:
     Eigen::MatrixXf forward(const Eigen::MatrixXf& input);
 
     /**
-     * @brief Backpropagation method (defined here due to use of template)
-     * @tparam Loss - Type of loss function used
-     * @param pred - Network's output values/probabilities
-     * @param target - Correct label (target) values/probabilities
-     * @return Error metric calculated by loss function after feedforward
+     * @brief Backpropagation method
+     * @param errorDerivative - The derivative of error with respect to network's output activations (takes in the
+     *                          matrix from LossFunction::backward(modelOutput, target), see documentation for more)
      */
-    template <typename Loss>
-    float backward(const Eigen::MatrixXf& pred, const Eigen::MatrixXf& target) {
-        if (!(dynamic_cast<Softmax *>(mLayers.back().get())) && std::is_same<Loss, CE>::value) {
-            std::cerr << "Using cross-entropy loss with a final non-softmax layer is not recommended "
-                         "for multi-classification.";
-        }
-        float loss = Loss::forward(pred, target);
-        auto errorDerivative = Loss::backward(pred, target);
-
-        auto output = mLayers.back()->backward(errorDerivative);
-        for (auto it = mLayers.rbegin() + 1; it != mLayers.rend(); ++it) {
-            output = (*it)->backward(output);
-        }
-        return loss;
-    }
+    void backward(const Eigen::MatrixXf& errorDerivative);
 
 private:
     std::vector<std::unique_ptr<BaseModule>> mLayers;

@@ -1,15 +1,15 @@
 #include <iostream>
-#include "../../include/layers/RELU.h"
+#include "../../include/layers/ReLU.h"
 
-Eigen::MatrixXf RELU::forward(const Eigen::MatrixXf& input)
+Eigen::MatrixXf ReLU::forward(const Eigen::MatrixXf& input)
 {
-    curActivation = input;
-    return curActivation.array().unaryExpr(
+    curActivation = input.array().unaryExpr(
             [] (float x) -> float {return std::max(0.0f, x);}
             );
+    return curActivation;
 }
 
-Eigen::MatrixXf RELU::backward(const Eigen::MatrixXf& input)
+Eigen::MatrixXf ReLU::backward(const Eigen::MatrixXf& input)
 {
     Eigen::MatrixXf output = curActivation.array().unaryExpr(
             [] (float x) -> float {return float(bool(x > 0) * 1);}
@@ -17,7 +17,7 @@ Eigen::MatrixXf RELU::backward(const Eigen::MatrixXf& input)
     return output.array() *= input.array();
 }
 
-std::string RELU::getName() const
+std::string ReLU::getName() const
 {
     return "ReLU";
 }

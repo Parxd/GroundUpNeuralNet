@@ -13,9 +13,10 @@ add_executable(GNN_train ./src/main.cpp) # train configuration
 target_sources(GNN_test PRIVATE
         # Source files
         ./src/layers/Linear.cpp
-        ./src/layers/RELU.cpp
+        ./src/layers/ReLU.cpp
         ./src/layers/Sigmoid.cpp
         ./src/layers/Softmax.cpp
+        ./src/layers/Tanh.cpp
         ./src/losses/CE.cpp
         ./src/losses/MSE.cpp
         ./src/containers/Container.cpp
@@ -27,15 +28,17 @@ target_sources(GNN_test PRIVATE
         ./tests/unit/RELUTest.cpp
         ./tests/unit/SigmoidTest.cpp
         ./tests/unit/SoftmaxTest.cpp
+        ./tests/unit/TanhTest.cpp
         ./tests/unit/MSETest.cpp
         ./tests/unit/CETest.cpp
         )
 target_sources(GNN_train PRIVATE
         # Source files
         ./src/layers/Linear.cpp
-        ./src/layers/RELU.cpp
+        ./src/layers/ReLU.cpp
         ./src/layers/Sigmoid.cpp
         ./src/layers/Softmax.cpp
+        ./src/layers/Tanh.cpp
         ./src/losses/CE.cpp
         ./src/losses/MSE.cpp
         ./src/containers/Container.cpp

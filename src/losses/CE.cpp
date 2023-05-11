@@ -1,21 +1,14 @@
-#include <iostream>
 #include "../../include/losses/CE.h"
 
 float CE::forward(const Eigen::MatrixXf &pred, const Eigen::MatrixXf &target) {
-    float avgError = 0;
-    auto numClasses = float(target.rows());
+    double sum = 0;
     for (int i = 0; i < target.cols(); ++i)
     {
-        float sigma = 0;
-        sigma += (target.col(i).array() * pred.col(i).array().log()).sum();
-        sigma *= (-1 / numClasses);
-        avgError += sigma;
+        sum += log((target.col(i).array() * pred.col(i).array()).sum());
     }
-    avgError /= float(target.cols());
-    return avgError;
+    return float(-sum / float(target.cols()));
 }
 
 Eigen::MatrixXf CE::backward(const Eigen::MatrixXf &pred, const Eigen::MatrixXf &target) {
-    Eigen::MatrixXf output = -target.array() / (pred.array() + 0.000001);
-    return output;
+    return pred.array() - target.array();
 }

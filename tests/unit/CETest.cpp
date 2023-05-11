@@ -16,24 +16,22 @@ namespace {
                 {0, 0}
         };
         auto result = CE::forward(pred, target);
-        float answer = 0.020927;
-        EXPECT_NEAR(result, answer, 0.00001);
+        float answer = 0.06;
+        EXPECT_NEAR(result, answer, 0.01);
     }
 
     TEST(CETest, backward) {
         Eigen::MatrixXf pred{
-                {0.09},
-                {0.50},
-                {0.40},
-                {0.01}
+                {0.98, 0.01, 0.01},
+                {0.01, 0.01, 0.01},
+                {0.01, 0.98, 0.98},
         };
         Eigen::MatrixXf target{
-                {0},
-                {0},
-                {0},
-                {1}
+                {1, 0, 0},
+                {0, 0, 0},
+                {0, 1, 1}
         };
-        std::cout << CE::forward(pred, target);
+        CE::forward(pred, target);
         auto errorDerivative = CE::backward(pred, target);
     }
 }

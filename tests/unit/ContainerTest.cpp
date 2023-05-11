@@ -1,6 +1,6 @@
 #include <gtest/gtest.h>
 #include "../../include/containers/Container.h"
-#include "../../include/layers/RELU.h"
+#include "../../include/layers/ReLU.h"
 #include "../../include/layers/Sigmoid.h"
 #include "../../include/layers/Softmax.h"
 #include "../../include/losses/MSE.h"
@@ -11,9 +11,9 @@ namespace {
     TEST(ContainerTest, construction) {
         Container cont(
                 BaseModule::make<Linear>(2, 10),
-                BaseModule::make<RELU>(),
+                BaseModule::make<ReLU>(),
                 BaseModule::make<Linear>(10, 10),
-                BaseModule::make<RELU>(),
+                BaseModule::make<ReLU>(),
                 BaseModule::make<Linear>(10, 2),
                 BaseModule::make<Softmax>()
         );

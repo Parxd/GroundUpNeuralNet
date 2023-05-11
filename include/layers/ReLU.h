@@ -6,12 +6,12 @@
 // Forward declaration
 class BaseModule;
 
-class RELU : public BaseModule
+class ReLU : public BaseModule
 {
 public:
-    RELU() = default;
+    ReLU() = default;
 
-    ~RELU() override = default;
+    ~ReLU() override = default;
 
     /**
      * @brief Feedforward previous layer through ReLU activation function

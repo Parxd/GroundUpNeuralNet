@@ -6,6 +6,11 @@
 #include <vector>
 #include "../layers/BaseModule.h"
 #include "../layers/Linear.h"
+#include "../layers/RELU.h"
+#include "../layers/Sigmoid.h"
+#include "../layers/Softmax.h"
+#include "../../include/losses/MSE.h"
+#include "../../include/losses/CE.h"
 
 class Container
 {

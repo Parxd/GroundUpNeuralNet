@@ -12,9 +12,8 @@ Eigen::MatrixXf Softmax::forward(const Eigen::MatrixXf &input) {
 }
 
 Eigen::MatrixXf Softmax::backward(const Eigen::MatrixXf &dLA) {
-    Eigen::MatrixXf output = dLA.array() *
-            (curActivation.array() * (1 - curActivation.array()).array()).array();
-    return output;
+    Eigen::MatrixXf output = curActivation.array() * (1 - curActivation.array()).array();
+    return output.array() *= dLA.array();
 }
 
 std::string Softmax::getName() const {

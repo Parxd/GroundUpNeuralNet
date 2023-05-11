@@ -1,0 +1,10 @@
+#ifndef GROUNDUPNEURALNET_SINE_H
+#define GROUNDUPNEURALNET_SINE_H
+
+
+class sine {
+
+};
+
+
+#endif //GROUNDUPNEURALNET_SINE_H

@@ -17,19 +17,15 @@ namespace {
                 BaseModule::make<Linear>(10, 2),
                 BaseModule::make<Softmax>()
         );
-        Eigen::MatrixXf data{
+        Eigen::MatrixXf batch1{
                 {1, 2, 3, 8, 7, 7, 7},
                 {4, 5, 6, 7, 7, 7, 7}
         };
-        auto modelOutput = cont.forward(data);
-
-        Eigen::MatrixXf target{
+        auto modelOutput1 = cont.forward(batch1);
+        Eigen::MatrixXf target1{
                 {2, 3, 4, 5, 5, 4, 3},
                 {1, 2, 1, 2, 4, 3, 2}
         };
-        for (int i = 0; i < 500; ++i) {
-            cont.backward(modelOutput, target);
-        }
-        std::cout << cont.forward(data);
+        cont.backward(modelOutput1, target1);
     }
 }

@@ -19,6 +19,7 @@ target_sources(GNN_test PRIVATE
         ./src/losses/CE.cpp
         ./src/losses/MSE.cpp
         ./src/containers/Container.cpp
+        ./src/data/Sine.cpp
 
         # Test files
         ./tests/unit/LinearTest.cpp
@@ -38,6 +39,7 @@ target_sources(GNN_train PRIVATE
         ./src/losses/CE.cpp
         ./src/losses/MSE.cpp
         ./src/containers/Container.cpp
+        ./src/data/Sine.cpp
         )
 
 target_compile_options(GNN_test PRIVATE -DTEST_MODE)

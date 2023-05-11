@@ -1505,14 +1505,23 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="68fd4622-5b44-4783-96ef-8e7e24320242" name="Changes" comment="Add Container forward &amp; backward">
+    <list default="true" id="68fd4622-5b44-4783-96ef-8e7e24320242" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/include/containers/Trainer.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/data/Circle.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/data/Sine.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/containers/Trainer.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/data/Circle.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/data/Sine.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/containers/Container.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/containers/Container.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/containers/Container.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Container.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layers/Linear.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/layers/Linear.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layers/RELU.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/layers/RELU.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layers/Sigmoid.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/layers/Sigmoid.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layers/Softmax.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/layers/Softmax.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/losses/CE.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/losses/CE.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/unit/CETest.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/tests/unit/CETest.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/unit/ContainerTest.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/tests/unit/ContainerTest.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/unit/MSETest.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/tests/unit/MSETest.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -1549,33 +1558,33 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.cidr.known.project.marker": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "cf.advertisement.text.has.clang-format": "true",
-    "cf.first.check.clang-format": "false",
-    "cidr.known.project.marker": "true",
-    "ctest.advertisement.all.test.configuration.is.created": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "/home/parxed/code/projects/DeepLearningFrameworkFromScratchCpp",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "reference.settings.deploy.options",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;cf.advertisement.text.has.clang-format&quot;: &quot;true&quot;,
+    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;ctest.advertisement.all.test.configuration.is.created&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/parxed/code/projects/DeepLearningFrameworkFromScratchCpp&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.deploy.options&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/data" />
       <recent name="$PROJECT_DIR$/include/layers" />
       <recent name="$PROJECT_DIR$/include" />
       <recent name="C:\Users\14253\Desktop\GroundUpNeuralNet\tests\unit" />
       <recent name="C:\Users\14253\Desktop\GroundUpNeuralNet\include\layers" />
-      <recent name="C:\Users\14253\Desktop\GroundUpNeuralNet\src\layers" />
     </key>
   </component>
   <component name="RunAnythingCache">
@@ -10569,7 +10578,9 @@
       <workItem from="1683532005339" duration="5770000" />
       <workItem from="1683577437187" duration="21497000" />
       <workItem from="1683649605857" duration="7452000" />
-      <workItem from="1683660091096" duration="7628000" />
+      <workItem from="1683660091096" duration="8987000" />
+      <workItem from="1683694198363" duration="2969000" />
+      <workItem from="1683748405454" duration="14514000" />
     </task>
     <task id="LOCAL-00001" summary="Add Container forward &amp; backward">
       <created>1683667142346</created>
@@ -10578,7 +10589,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683667142346</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Complete feedforward and backpropagation features">
+      <created>1683673505230</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1683673505230</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -10592,7 +10610,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Add Container forward &amp; backward" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add Container forward &amp; backward" />
+    <MESSAGE value="Complete feedforward and backpropagation features" />
+    <option name="LAST_COMMIT_MESSAGE" value="Complete feedforward and backpropagation features" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

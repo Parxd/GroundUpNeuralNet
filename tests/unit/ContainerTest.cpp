@@ -1,9 +1,5 @@
 #include <gtest/gtest.h>
 #include "../../include/containers/Container.h"
-#include "../../include/layers/ReLU.h"
-#include "../../include/layers/Sigmoid.h"
-#include "../../include/layers/Softmax.h"
-#include "../../include/losses/MSE.h"
 
 namespace {
     class ContainerTest : public ::testing::Test { };
@@ -26,6 +22,6 @@ namespace {
                 {2, 3, 4, 5, 5, 4, 3},
                 {1, 2, 1, 2, 4, 3, 2}
         };
-        cont.backward(modelOutput1, target1);
+        cont.backward<MSE>(modelOutput1, target1);
     }
 }

@@ -3,11 +3,10 @@
 
 #include <Eigen/Dense>
 
-struct MSE
-{
-    MSE() = default;
+struct MSE {
+    MSE() = delete;
 
-    ~MSE() = default;
+    ~MSE() = delete;
 
     static float forward(const Eigen::MatrixXf &pred, const Eigen::MatrixXf &target);
 

@@ -4,9 +4,9 @@
 #include <Eigen/Dense>
 
 struct CE {
-    CE() = default;
+    CE() = delete;
 
-    ~CE() = default;
+    ~CE() = delete;
 
     static float forward(const Eigen::MatrixXf &pred, const Eigen::MatrixXf &target);
 

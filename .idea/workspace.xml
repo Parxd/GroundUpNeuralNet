@@ -1505,21 +1505,13 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="68fd4622-5b44-4783-96ef-8e7e24320242" name="Changes" comment="Add CE loss support">
-      <change afterPath="$PROJECT_DIR$/include/layers/Tanh.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/layers/Tanh.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/unit/TanhTest.cpp" afterDir="false" />
+    <list default="true" id="68fd4622-5b44-4783-96ef-8e7e24320242" name="Changes" comment="Finish CE backward + add Tanh activation function">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/include/containers/Container.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/containers/Container.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/layers/RELU.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/layers/ReLU.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layers/RELU.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/layers/ReLU.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layers/Sigmoid.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/layers/Sigmoid.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layers/Softmax.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/layers/Softmax.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/losses/CE.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/losses/CE.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/unit/CETest.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/tests/unit/CETest.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/losses/CE.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/losses/CE.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/losses/MSE.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/losses/MSE.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/Container.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Container.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/unit/ContainerTest.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/tests/unit/ContainerTest.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/unit/RELUTest.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/tests/unit/RELUTest.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -2043,11 +2035,6 @@
       </method>
     </configuration>
     <configuration name="Tutorial_simple_example_fixed_size" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="GroundUpNeuralNet" TARGET_NAME="Tutorial_simple_example_fixed_size" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="GroundUpNeuralNet" RUN_TARGET_NAME="Tutorial_simple_example_fixed_size">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -10579,7 +10566,8 @@
       <workItem from="1683660091096" duration="8987000" />
       <workItem from="1683694198363" duration="2969000" />
       <workItem from="1683748405454" duration="16027000" />
-      <workItem from="1683772450674" duration="3845000" />
+      <workItem from="1683772450674" duration="7518000" />
+      <workItem from="1683837397036" duration="4337000" />
     </task>
     <task id="LOCAL-00001" summary="Add Container forward &amp; backward">
       <created>1683667142346</created>
@@ -10602,7 +10590,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683769803639</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Finish CE backward + add Tanh activation function">
+      <created>1683783475544</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1683783475544</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -10618,7 +10613,8 @@
     <MESSAGE value="Add Container forward &amp; backward" />
     <MESSAGE value="Complete feedforward and backpropagation features" />
     <MESSAGE value="Add CE loss support" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add CE loss support" />
+    <MESSAGE value="Finish CE backward + add Tanh activation function" />
+    <option name="LAST_COMMIT_MESSAGE" value="Finish CE backward + add Tanh activation function" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

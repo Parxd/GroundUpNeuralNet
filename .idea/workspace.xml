@@ -1505,16 +1505,9 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="68fd4622-5b44-4783-96ef-8e7e24320242" name="Changes" comment="Add support for LeakyReLU activation function">
-      <change afterPath="$PROJECT_DIR$/tests/unit/SineTest.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/data/Sine.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/data/Sine.h" afterDir="false" />
+    <list default="true" id="68fd4622-5b44-4783-96ef-8e7e24320242" name="Changes" comment="Implement Sine.h data generator">
       <change beforePath="$PROJECT_DIR$/src/data/Sine.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/Sine.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layers/LeakyReLU.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/layers/LeakyReLU.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layers/ReLU.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/layers/ReLU.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/losses/CE.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/losses/CE.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/unit/ContainerTest.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/tests/unit/ContainerTest.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/unit/SineTest.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/tests/unit/SineTest.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -10575,7 +10568,7 @@
       <workItem from="1683694198363" duration="2969000" />
       <workItem from="1683748405454" duration="16027000" />
       <workItem from="1683772450674" duration="7518000" />
-      <workItem from="1683837397036" duration="33676000" />
+      <workItem from="1683837397036" duration="33979000" />
     </task>
     <task id="LOCAL-00001" summary="Add Container forward &amp; backward">
       <created>1683667142346</created>
@@ -10626,7 +10619,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683845988319</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Implement Sine.h data generator">
+      <created>1683956387260</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1683956387260</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -10646,7 +10646,8 @@
     <MESSAGE value="Add container support for different loss functions" />
     <MESSAGE value="Separate concern of type of loss function desired from container data structure itself" />
     <MESSAGE value="Add support for LeakyReLU activation function" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add support for LeakyReLU activation function" />
+    <MESSAGE value="Implement Sine.h data generator" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implement Sine.h data generator" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

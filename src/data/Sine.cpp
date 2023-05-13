@@ -1,3 +1,4 @@
+#include <random>
 #include "../../include/data/Sine.h"
 
 Eigen::MatrixXf Sine::generate(int num, float errorSplit = 0.2, float tolerance = 20, int xStretchFactor = 5, float ySquashFactor = 1.1) {
@@ -15,6 +16,15 @@ Eigen::MatrixXf Sine::generate(int num, float errorSplit = 0.2, float tolerance 
     data.row(0).tail(incorrectCols).setRandom();
     data.row(1).tail(incorrectCols).setRandom();
     data.row(2).tail(incorrectCols) = Eigen::VectorXf::Zero(incorrectCols);
+
+    // Shuffle data
+    std::random_device r;
+    std::seed_seq seed{r(), r(), r(), r(), r(), r(), r(), r()};
+    std::mt19937 eng(seed);
+    Eigen::PermutationMatrix<Eigen::Dynamic, Eigen::Dynamic> permX(data.cols());
+    permX.setIdentity();
+    std::shuffle(permX.indices().data(), permX.indices().data()+permX.indices().size(), eng);
+    data = data * permX;
 
     return data;
 }

@@ -1,5 +1,6 @@
 #include <gtest/gtest.h>
 #include "../../include/containers/Container.h"
+#include "../../include/data/Sine.h"
 
 namespace {
     class ContainerTest : public ::testing::Test { };

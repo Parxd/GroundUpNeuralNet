@@ -32,6 +32,8 @@ target_sources(GNN_test PRIVATE
         ./tests/unit/TanhTest.cpp
         ./tests/unit/MSETest.cpp
         ./tests/unit/CETest.cpp
+
+        ./tests/unit/SineTest.cpp
         )
 target_sources(GNN_train PRIVATE
         # Source files

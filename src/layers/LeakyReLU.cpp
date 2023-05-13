@@ -9,7 +9,7 @@ Eigen::MatrixXf LeakyReLU::forward(const Eigen::MatrixXf &input) {
 
 Eigen::MatrixXf LeakyReLU::backward(const Eigen::MatrixXf &dLA) {
     Eigen::MatrixXf output = curActivation.array().unaryExpr(
-            [] (float x) -> float {return (x > 0) ? 1 : 0.2f;}
+            [] (float x) -> float {return (x >= 0) ? 1 : 0.2f;}
     );
     return output.array() *= dLA.array();
 }

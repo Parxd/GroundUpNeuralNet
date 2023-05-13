@@ -10,5 +10,5 @@ float CE::forward(const Eigen::MatrixXf &pred, const Eigen::MatrixXf &target) {
 }
 
 Eigen::MatrixXf CE::backward(const Eigen::MatrixXf &pred, const Eigen::MatrixXf &target) {
-    return pred.array() - target.array();
+    return (pred - target) / target.cols();
 }

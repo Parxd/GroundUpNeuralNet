@@ -17,8 +17,8 @@ namespace {
             {8, 2, 1}
         };
         float error = MSE::forward(modelOutput, target);
-//        float answer = 0.05;
-//        EXPECT_NEAR(error, answer, 0.001);
+        float answer = 16.33333;
+        EXPECT_NEAR(error, answer, 0.001);
         auto errorDerivative = MSE::backward(modelOutput, target);
     }
 }

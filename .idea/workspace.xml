@@ -1505,18 +1505,12 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="68fd4622-5b44-4783-96ef-8e7e24320242" name="Changes" comment="Fix Tanh backward error (closes #1)">
-      <change afterPath="$PROJECT_DIR$/tests/unit/ReLUTest.cpp" afterDir="false" />
+    <list default="true" id="68fd4622-5b44-4783-96ef-8e7e24320242" name="Changes" comment="Implement trainer class + this project is now basically done!!!">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/include/containers/Trainer.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/containers/Trainer.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/data/Circle.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/data/Circle.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/containers/Trainer.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Trainer.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/Circle.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/Circle.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/Sine.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/Sine.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/unit/RELUTest.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/unit/SineTest.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/tests/unit/SineTest.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -1553,26 +1547,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;cf.advertisement.text.has.clang-format&quot;: &quot;true&quot;,
-    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
-    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;ctest.advertisement.all.test.configuration.is.created&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/parxed/code/projects/DeepLearningFrameworkFromScratchCpp&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.deploy.options&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "cf.advertisement.text.has.clang-format": "true",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "ctest.advertisement.all.test.configuration.is.created": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/home/parxed/code/projects/GroundUpNeuralNet",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "reference.settings.deploy.options",
+    "structure.view.defaults.are.configured": "true",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/data" />
@@ -10583,7 +10578,9 @@
       <workItem from="1684394241666" duration="11219000" />
       <workItem from="1684461131814" duration="1853000" />
       <workItem from="1684630941921" duration="1000" />
-      <workItem from="1684633920886" duration="6284000" />
+      <workItem from="1684633920886" duration="6656000" />
+      <workItem from="1684642073734" duration="7000" />
+      <workItem from="1684642208939" duration="954000" />
     </task>
     <task id="LOCAL-00001" summary="Add Container forward &amp; backward">
       <created>1683667142346</created>
@@ -10662,7 +10659,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684394615783</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Implement trainer class + this project is now basically done!!!">
+      <created>1684641518882</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1684641518882</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -10686,7 +10690,8 @@
     <MESSAGE value="Add data shuffle feat" />
     <MESSAGE value="Refactor MSE test" />
     <MESSAGE value="Fix Tanh backward error (closes #1)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix Tanh backward error (closes #1)" />
+    <MESSAGE value="Implement trainer class + this project is now basically done!!!" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implement trainer class + this project is now basically done!!!" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

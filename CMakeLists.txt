@@ -21,7 +21,6 @@ target_sources(GNN_test PRIVATE
         ./src/losses/CE.cpp
         ./src/losses/MSE.cpp
         ./src/containers/Container.cpp
-        ./src/containers/Trainer.cpp
         ./src/data/Sine.cpp
         ./src/data/Circle.cpp
 
@@ -48,7 +47,6 @@ target_sources(GNN_train PRIVATE
         ./src/losses/CE.cpp
         ./src/losses/MSE.cpp
         ./src/containers/Container.cpp
-        ./src/containers/Trainer.cpp
         ./src/data/Sine.cpp
         ./src/data/Circle.cpp
         )

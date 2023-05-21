@@ -1505,8 +1505,18 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="68fd4622-5b44-4783-96ef-8e7e24320242" name="Changes" comment="">
+    <list default="true" id="68fd4622-5b44-4783-96ef-8e7e24320242" name="Changes" comment="Fix Tanh backward error (closes #1)">
+      <change afterPath="$PROJECT_DIR$/tests/unit/ReLUTest.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/containers/Trainer.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/containers/Trainer.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/data/Circle.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/data/Circle.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/Trainer.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Trainer.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/Circle.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/Circle.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/Sine.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/Sine.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/unit/RELUTest.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/unit/SineTest.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/tests/unit/SineTest.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -1577,7 +1587,12 @@
       <command value="Core" />
     </option>
   </component>
-  <component name="RunManager" selected="Google Test.GNN_test">
+  <component name="RunManager" selected="CMake Application.GNN_train">
+    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="GNN_test" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="GroundUpNeuralNet" TARGET_NAME="GNN_test" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="GroundUpNeuralNet" RUN_TARGET_NAME="GNN_test" TEST_MODE="SUITE_TEST">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -10563,7 +10578,12 @@
       <workItem from="1683748405454" duration="16027000" />
       <workItem from="1683772450674" duration="7518000" />
       <workItem from="1683837397036" duration="34412000" />
-      <workItem from="1683977945456" duration="1000" />
+      <workItem from="1683977945456" duration="66000" />
+      <workItem from="1684390959884" duration="1000" />
+      <workItem from="1684394241666" duration="11219000" />
+      <workItem from="1684461131814" duration="1853000" />
+      <workItem from="1684630941921" duration="1000" />
+      <workItem from="1684633920886" duration="6284000" />
     </task>
     <task id="LOCAL-00001" summary="Add Container forward &amp; backward">
       <created>1683667142346</created>
@@ -10628,7 +10648,21 @@
       <option name="project" value="LOCAL" />
       <updated>1683956696408</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Refactor MSE test">
+      <created>1683978004982</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1683978004983</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Fix Tanh backward error (closes #1)">
+      <created>1684394615783</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1684394615783</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -10650,7 +10684,9 @@
     <MESSAGE value="Add support for LeakyReLU activation function" />
     <MESSAGE value="Implement Sine.h data generator" />
     <MESSAGE value="Add data shuffle feat" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add data shuffle feat" />
+    <MESSAGE value="Refactor MSE test" />
+    <MESSAGE value="Fix Tanh backward error (closes #1)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix Tanh backward error (closes #1)" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

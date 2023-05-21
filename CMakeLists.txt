@@ -21,12 +21,14 @@ target_sources(GNN_test PRIVATE
         ./src/losses/CE.cpp
         ./src/losses/MSE.cpp
         ./src/containers/Container.cpp
+        ./src/containers/Trainer.cpp
         ./src/data/Sine.cpp
+        ./src/data/Circle.cpp
 
         # Test files
         ./tests/unit/LinearTest.cpp
         ./tests/unit/ContainerTest.cpp
-        ./tests/unit/RELUTest.cpp
+        ./tests/unit/ReLUTest.cpp
         ./tests/unit/SigmoidTest.cpp
         ./tests/unit/SoftmaxTest.cpp
         ./tests/unit/TanhTest.cpp
@@ -46,7 +48,9 @@ target_sources(GNN_train PRIVATE
         ./src/losses/CE.cpp
         ./src/losses/MSE.cpp
         ./src/containers/Container.cpp
+        ./src/containers/Trainer.cpp
         ./src/data/Sine.cpp
+        ./src/data/Circle.cpp
         )
 
 target_compile_options(GNN_test PRIVATE -DTEST_MODE)

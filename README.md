@@ -21,4 +21,5 @@ The following loss functions are supported:
 
 Future features I’d like to implement:
 - Support for generic numeric types, such as doubles & integers. As of now, only float32 is supported.
+- Support for different optimizers
 - GPU support w/ CUDA

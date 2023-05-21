@@ -6,7 +6,7 @@ This library was built with [Eigen 3.4.0](https://eigen.tuxfamily.org/index.php?
 
 **NOTE:** these dependencies come w/ this project's CMake, so no manual linking needed :)
 
-It also comes with a sample data generators to test your network (i.e. sine wave with noise) and a trainer class for easier training using mini-batch descent.
+It also comes with a sample data generators to test your network (i.e. sine wave with noise), a trainer class for easier training using mini-batch descent, and save feature to save your model's weights and biases.
 
 The following activation functions are supported:
 - Sigmoid

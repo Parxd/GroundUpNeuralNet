@@ -24,5 +24,8 @@ namespace {
                 {1, 2, 1, 2, 4, 3, 2}
         };
         cont.backward(MSE::backward(modelOutput1, target1));
+
+        cont.save("../src", "sine wave model");
+        cont.load("../src/model.csv");
     }
 }

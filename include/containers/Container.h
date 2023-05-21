@@ -42,11 +42,6 @@ public:
         (mLayers.push_back(std::unique_ptr<BaseModule>(layer)), ...);
     }
 
-    /*
-     * @brief Prints order and description of each layer in internal vector
-     */
-    void view();
-
     /**
      * @brief Feedforward method
      * @param input - Data to be fed through network
@@ -61,8 +56,28 @@ public:
      */
     void backward(const Eigen::MatrixXf& errorDerivative);
 
+    /*
+     * @brief Prints order and description of each layer in internal vector
+     */
+    void view();
+
+    /*
+     * @brief Saves model's weights & biases to directory
+     * @param directory - File to save to (.CSV)
+     * @param name - Model name to be saved under
+     */
+    void save(const std::string& file, const std::string& name = "");
+
+    /**
+     * @brief Loads model's weights & biases from directory
+     * @param file - File to load from (.CSV)
+     */
+    void load(const std::string& file);
+
 private:
     std::vector<std::unique_ptr<BaseModule>> mLayers;
+
+    void write(const std::string& file, const std::string& name);
 };
 
 #endif //GROUNDUPNEURALNET_CONTAINER_H

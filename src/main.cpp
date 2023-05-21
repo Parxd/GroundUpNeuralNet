@@ -12,9 +12,9 @@ int main(int argc, char** argv)
             new Sigmoid(),
             new Linear(10, 2)
             );
-    auto data = Sine::generate(500000, 0.2, 10, 5, 1.1);
+    auto data = Sine::generate(1000000, 0.2, 200, 50, 1.1);
     Eigen::MatrixXf features = data.topRows(2);
     Eigen::MatrixXf labels = data.bottomRows(2);
-    Trainer<CE>::train(cont, features, labels, 32, 10, 1);
+    Trainer<MSE>::train(cont, features, labels, 32, 10, 1, true);
     return 0;
 }

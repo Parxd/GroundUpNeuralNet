@@ -17,7 +17,7 @@ int main(int argc, char** argv)
     auto data = Sine::generate(1000000, 0.2, 200, 50, 1.1);
     Eigen::MatrixXf features = data.topRows(2);
     Eigen::MatrixXf labels = data.bottomRows(2);
-    Trainer<MSE>::train(cont, features, labels, 5, 10, 1, true);
+    Trainer<CE>::train(cont, features, labels, 32, 5, 1, true);
     cont.save("../src/model.csv");
 
     return 0;

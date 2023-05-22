@@ -1505,12 +1505,8 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="68fd4622-5b44-4783-96ef-8e7e24320242" name="Changes" comment="Implement model saving &amp; loading feature + shuffle data feature for trainer">
+    <list default="true" id="68fd4622-5b44-4783-96ef-8e7e24320242" name="Changes" comment="Add accuracy printing feature during training to evaluate model performance">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/containers/Trainer.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/containers/Trainer.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/layers/Linear.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/layers/Linear.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/layers/ReLU.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/layers/ReLU.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/Container.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Container.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -10579,7 +10575,7 @@
       <workItem from="1684642208939" duration="1092000" />
       <workItem from="1684692840468" duration="10252000" />
       <workItem from="1684715535552" duration="6593000" />
-      <workItem from="1684725063172" duration="2542000" />
+      <workItem from="1684725063172" duration="3355000" />
     </task>
     <task id="LOCAL-00001" summary="Add Container forward &amp; backward">
       <created>1683667142346</created>
@@ -10679,7 +10675,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684703502471</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Add accuracy printing feature during training to evaluate model performance">
+      <created>1684727646651</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1684727646651</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -10706,7 +10709,8 @@
     <MESSAGE value="Implement trainer class + this project is now basically done!!!" />
     <MESSAGE value="Implement templatization for loss function used by trainer, delete Trainer.cpp for this reason" />
     <MESSAGE value="Implement model saving &amp; loading feature + shuffle data feature for trainer" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implement model saving &amp; loading feature + shuffle data feature for trainer" />
+    <MESSAGE value="Add accuracy printing feature during training to evaluate model performance" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add accuracy printing feature during training to evaluate model performance" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

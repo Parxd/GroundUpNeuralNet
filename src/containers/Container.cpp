@@ -1,3 +1,4 @@
+#include <cctype>
 #include <fstream>
 #include <filesystem>
 #include "../../include/containers/Container.h"
@@ -64,16 +65,28 @@ void Container::load(const std::string &file) {
     mLayers.clear();
 
     std::string name;
-    int lineCounter = 0;
+    std::vector<std::string> architecture;
+    std::vector<std::vector<float>> weights;
+    std::vector<std::vector<float>> biases;
+
     std::ifstream csvFile(file);
     std::string line;
     while (std::getline(csvFile, line)) {
-        if (!lineCounter) {
-            name = line;
+        if (isalpha(line[0])) {
+            architecture.push_back(line);
         }
-        ++lineCounter;
+        else {
+            std::vector<float> vals;
+        }
     }
+    name = architecture.front();
 
+    std::vector<std::unique_ptr<BaseModule>> model;
+    for (auto it = architecture.begin() + 1; it != architecture.end(); ++it) {
+        if ((*it) == "Linear") {
+            model.push_back(BaseModule::make<Linear>(1, 1));
+        }
+    }
     std::cout << "Model: \"" << name << "\" successfully loaded.";
 }
 

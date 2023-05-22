@@ -22,9 +22,7 @@ public:
      * @brief Feedforward method of a linear layer class
      * @param input - The input matrix that is fed into this layer from the previous layer (previous
      *                layer's activation matrix after a pass through an activation function layer)
-     * @param nextActivation - This layer's activation matrix after operations w/ weights & biases (next layer's
-     *                         activation matrix)
-     * @return [NONE] Modifies output matrix (nextActivation) in-place
+     * @return Output matrix (next layer's activations)
     */
     Eigen::MatrixXf forward(const Eigen::MatrixXf& input) override;
 
@@ -33,11 +31,9 @@ public:
      * NOTE: The individual layer classes implementation of backward propagation are quite
      *       confusing on their own. Look at Container.cpp to see how they are all
      *       used together.
-     * @param ∂LA - The input matrix with the derivative of loss w/ respect to NEXT layer
+     * @param dLA - The input matrix with the derivative of loss w/ respect to NEXT layer
      *              output activations
-     * @param output - The input matrix matrix multiplied with this layer's weights to backpropagate
-     *                 error to the previous layer
-     * @return [NONE] Modifies output matrix (& weights/biases) in-place
+     * @return Error w/ respect to layer's activation
     */
     Eigen::MatrixXf backward(const Eigen::MatrixXf& dLA) override;
 

@@ -16,14 +16,14 @@ public:
     /**
      * @brief Feedforward previous layer through ReLU activation function
      * @param input - The input matrix that is fed into this layer from the previous layer
-     * @param output - Resulting matrix after ReLU function applied
+     * @return Resulting matrix after ReLU function applied
     */
     Eigen::MatrixXf forward(const Eigen::MatrixXf& input) override;
 
     /**
-     * @brief
-     * @param
-     * @param
+     * @brief ReLU derivative
+     * @param input - The propagated error from higher layers
+     * @return Error w/ respect to ReLU activation
     */
     Eigen::MatrixXf backward(const Eigen::MatrixXf& input) override;
 

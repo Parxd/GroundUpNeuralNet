@@ -1505,13 +1505,13 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="68fd4622-5b44-4783-96ef-8e7e24320242" name="Changes" comment="">
+    <list default="true" id="68fd4622-5b44-4783-96ef-8e7e24320242" name="Changes" comment="Implement model saving &amp; loading feature + shuffle data feature for trainer">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/containers/Container.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/containers/Container.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/include/containers/Trainer.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/containers/Trainer.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/layers/Linear.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/layers/Linear.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/layers/ReLU.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/layers/ReLU.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/containers/Container.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Container.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/unit/ContainerTest.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/tests/unit/ContainerTest.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -2036,11 +2036,6 @@
       </method>
     </configuration>
     <configuration name="Tutorial_simple_example_fixed_size" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="GroundUpNeuralNet" TARGET_NAME="Tutorial_simple_example_fixed_size" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="GroundUpNeuralNet" RUN_TARGET_NAME="Tutorial_simple_example_fixed_size">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -10582,7 +10577,9 @@
       <workItem from="1684633920886" duration="6656000" />
       <workItem from="1684642073734" duration="7000" />
       <workItem from="1684642208939" duration="1092000" />
-      <workItem from="1684692840468" duration="8546000" />
+      <workItem from="1684692840468" duration="10252000" />
+      <workItem from="1684715535552" duration="6593000" />
+      <workItem from="1684725063172" duration="2542000" />
     </task>
     <task id="LOCAL-00001" summary="Add Container forward &amp; backward">
       <created>1683667142346</created>
@@ -10675,7 +10672,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684643227723</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Implement model saving &amp; loading feature + shuffle data feature for trainer">
+      <created>1684703502471</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1684703502471</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -10701,7 +10705,8 @@
     <MESSAGE value="Fix Tanh backward error (closes #1)" />
     <MESSAGE value="Implement trainer class + this project is now basically done!!!" />
     <MESSAGE value="Implement templatization for loss function used by trainer, delete Trainer.cpp for this reason" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implement templatization for loss function used by trainer, delete Trainer.cpp for this reason" />
+    <MESSAGE value="Implement model saving &amp; loading feature + shuffle data feature for trainer" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implement model saving &amp; loading feature + shuffle data feature for trainer" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

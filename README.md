@@ -25,3 +25,4 @@ Future features I’d like to implement:
 - GPU support w/ CUDA
 
 An example run using sample data (noisy sine wave approximation):
+![](https://github.com/Parxd/GroundUpNeuralNet/blob/main/res/example.png)
